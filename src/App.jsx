@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import Portfolio1 from './TestPotfolios/Porfolio3'
+import Portfolio1 from './TestPotfolios/Portfolio1'
+import Porfolio3 from './TestPotfolios/Porfolio3'
 
 function App() {
   return (
     <div >
-  <Portfolio1/>
+  <Porfolio3/>
     </div>
   )
 }
