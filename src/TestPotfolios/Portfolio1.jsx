@@ -1,11 +1,10 @@
 import React from 'react'
-import { AiFillInstagram, AiFillGithub, AiFillFacebook, AiFillAndroid } from "react-icons/ai"
-import { GoCodeReview } from 'react-icons/go'
+import { AiFillInstagram, AiFillGithub, AiFillFacebook } from "react-icons/ai"
 import { BsLinkedin } from 'react-icons/bs'
 import { ImWhatsapp } from 'react-icons/im'
 import { MdOutlineEmail } from 'react-icons/md'
 import ImgMain from "../image/img_main.png"
-import Footer from "../component/Footer"
+//import Footer from "../component/Footer"
 
 function Portfolio1() {
   return (
@@ -36,8 +35,8 @@ function Portfolio1() {
               src={ImgMain} alt='' />
           </div>
         </div>
+        {/**My Skill */}
         <div className=' '>
-          {/**My Skill */}
           <h1 className='text-center text-3xl text-gray-100 p-4 font-bold'>My Skills</h1>
           <div>
             <h2 className='px-5 py-2 bg-slate-100 text-gray-800 rounded-lg md:rounded-lg  text-xl mx-5 m-2'
@@ -52,7 +51,6 @@ function Portfolio1() {
             </h2>
           </div>
         </div>
-
 
         {/**My Projects */}
         <div>
@@ -104,6 +102,8 @@ function Portfolio1() {
           </a>
 
         </div>
+
+
         <div className='bg-white rounded-lg m-4 p-4'>
           <h1 className='p-2 text-center text-2xl font-bold'> Somme other Skills & Certifications </h1>
           <p className=' text-gray-900'><span className='text-xl font-bold'>Languages : </span>Arabic ,Frensh ,English,spanish</p>
