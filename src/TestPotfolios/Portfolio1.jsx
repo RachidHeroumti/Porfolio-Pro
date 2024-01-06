@@ -68,7 +68,7 @@ function Portfolio1() {
                 src='https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-800">Task Manger</h1>
               <p className="p-3" >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                A simple and efficient Todo List application built with React JS and NodeJs.
               </p>
             </div>
           </a>
@@ -79,7 +79,7 @@ function Portfolio1() {
                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLPy2WZD5ReCyn1h3YSS50kuhP0IZPpw9CA&usqp=CAU' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-800">Eco-Store</h1>
               <p className="p-3" >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                An Ecomerce store application with MERN
               </p>
             </div>
           </a>
