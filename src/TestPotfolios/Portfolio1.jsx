@@ -79,7 +79,7 @@ function Portfolio1() {
                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLPy2WZD5ReCyn1h3YSS50kuhP0IZPpw9CA&usqp=CAU' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-800">Eco-Store</h1>
               <p className="p-3" >
-                An Ecomerce store application with MERN
+                A powerful E-commerce store website built with the MERN stack
               </p>
             </div>
           </a>
