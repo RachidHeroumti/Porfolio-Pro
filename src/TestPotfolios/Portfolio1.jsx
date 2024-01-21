@@ -3,7 +3,7 @@ import { AiFillInstagram, AiFillGithub, AiFillFacebook } from "react-icons/ai"
 import { BsLinkedin } from 'react-icons/bs'
 import { ImWhatsapp } from 'react-icons/im'
 import { MdOutlineEmail } from 'react-icons/md'
-import ImgMain from "../image/img_main.png"
+import ImgMain from "../image/myProfile.jpg"
 //import Footer from "../component/Footer"
 
 function Portfolio1() {
@@ -35,8 +35,8 @@ function Portfolio1() {
               <a href='#project' className='px-4 py-2  border border-white rounded-lg my-3 border-spacing-2 text-gray-100'
               >View My Project</a>
             </div>
-            <img className=' object-cover bg-transparent rounded-lg h-[600px] w-[500px]'
-              src={ImgMain} alt='' />
+            {/* <img className=' object-cover bg-transparent rounded-lg h-[600px] w-[500px]'
+              src={ImgMain} alt='' /> */}
           </div>
         </div>
         {/**My Skill */}
