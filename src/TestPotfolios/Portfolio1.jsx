@@ -19,7 +19,7 @@ function Portfolio1() {
           </div>
           <div className=' flex items-center  p-5 flex-col md:flex-row  md:justify-between py-12 ' id='home'>
             <div className='text-gray-50 p-5'>
-              <h1 className='text-3xl text-gray-200 py-2  font-bold'>Hi ,I'am Andresal</h1>
+              <h1 className='text-3xl text-gray-200 py-2  font-bold'>Hi ,I'am Rachid</h1>
               <h2 className='text-2xl py-2'>I'm Full Stack Developer</h2>
               <p className='text-gray-400'>
                 - I'm a full-stack developer who turns your online dreams into reality.</p>
