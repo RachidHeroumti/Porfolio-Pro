@@ -80,7 +80,7 @@ function Portfolio1() {
                 src='https://images.pexels.com/photos/5717454/pexels-photo-5717454.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-800">Task Manger</h1>
               <p className="p-3" >
-                A simple and efficient Todo List application built with React JS and NodeJs.
+                A simple and efficient Todo List application built with NextJS and Firebase.
               </p>
             </div>
           </a>
