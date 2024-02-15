@@ -74,10 +74,10 @@ function Portfolio1() {
             </div>
           </a>
 
-          <a href='https://dwm-tasks.onrender.com/' target="_blank" className='h-fit'>
+          <a href='https://work-list-omega.vercel.app/' target="_blank" className='h-fit'>
             <div className=' bg-slate-100 shadow-lg rounded-lg flex flex-col hover:scale-105 duration-300'>
               <img className='h-[200px] rounded-lg'
-                src='https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
+                src='https://images.pexels.com/photos/5717454/pexels-photo-5717454.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-800">Task Manger</h1>
               <p className="p-3" >
                 A simple and efficient Todo List application built with React JS and NodeJs.
