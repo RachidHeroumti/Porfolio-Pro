@@ -49,10 +49,10 @@ function Portfolio1() {
             <h2 className='px-5 py-2 bg-slate-100 text-gray-800 rounded-lg md:rounded-lg  text-xl mx-5 m-2 '
             ><span className='text-black font-bold'>Back-end : </span>
               I excel in creating robust APIs and managing databases using technologies like
-              <span className=' text-black font-medium '> Node.js & ExpressJs and MongoDB  </span>
+              <span className=' text-black font-medium '> Node.js & ExpressJs and MongoDB ,SQL,Firebase  </span>
             </h2>
             <h2 className='px-5 py-2 bg-slate-100 text-gray-800 rounded-lg md:rounded-lg  text-xl mx-5 m-2 '
-            ><span className='text-black font-bold'>Programing Languages : </span> JavaScript ,TypeScript , Java ,C ,C++
+            ><span className='text-black font-bold'>Programing Languages : </span> JavaScript ,TypeScript , Java ,C ,C++ ,kotlin
             </h2>
           </div>
         </div>
