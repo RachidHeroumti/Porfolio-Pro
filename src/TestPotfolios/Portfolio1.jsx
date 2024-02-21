@@ -32,7 +32,8 @@ function Portfolio1() {
                 -  Your ideas spark, I code the fire. I bring your vision to life,
                 building the structure and launching your web masterpiece into the world.</p>
 
-              <a href='#project' className='px-4 py-2  border border-white rounded-lg my-3 border-spacing-2 text-gray-100'
+              <a href='#project' className='px-4 py-2  border border-white hover:bg-slate-800
+                 rounded-lg my-3 border-spacing-2 text-gray-100 '
               >View My Project</a>
             </div>
             {/* <img className=' object-cover bg-transparent rounded-lg h-[600px] w-[500px]'
