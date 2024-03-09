@@ -159,7 +159,7 @@ function Portfolio1() {
           <a href='https://onlay-shop.onrender.com/' target="_blank" className=''>
             <div className=' bg-cyan-950 shadow-lg rounded-lg flex flex-col hover:scale-105 duration-300'>
               <img className='h-[200px]  rounded-t-lg'
-                src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYLPy2WZD5ReCyn1h3YSS50kuhP0IZPpw9CA&usqp=CAU' alt='' />
+                src='https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374' alt='' />
               <h1 className="text-3xl text-center py-2 font-bold text-gray-300">Eco-Store</h1>
               <p className="p-3 text-gray-400" >
                 A powerful E-commerce store website built with ReactJS and NodeJs
