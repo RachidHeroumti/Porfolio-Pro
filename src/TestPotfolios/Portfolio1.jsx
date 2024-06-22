@@ -52,9 +52,9 @@ function Portfolio1() {
         {/**My  Services  */}
 
         <div>
-          <h1 className='text-3xl font-bold text-center text-white p-10'>My Skills</h1>
+          <h1 className='text-3xl font-bold text-center text-white p-5'>My Skills</h1>
         </div>
-        <div className='grid gap-10 p-5 lg:grid-cols-3 md:grid-cols-2 px-16 w-5/6 '>
+        <div className='grid gap-10 p-5 lg:grid-cols-3 md:grid-cols-2  w-5/6 '>
 
 
 
@@ -68,7 +68,7 @@ function Portfolio1() {
               <h1><span className='text-gray-400 px-2 pe-3' >{">>"}</span> Html/Css</h1>
               <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> Tailwind/Bootstrap</h1>
               <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> Javascript/TypeScript</h1>
-              <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> ReactLs</h1>
+              <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> ReactJs</h1>
               <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span>NextJs</h1>
             </div>
           </div>
@@ -120,7 +120,7 @@ function Portfolio1() {
 
 
         {/**My Services */}
-        <div className=' bg-cyan-950'>
+        <div className=' bg-cyan-950 w-5/6 p-5'>
   <h1 className='text-center text-3xl text-gray-100 p-4 font-bold'>Services</h1>
   <div className=' bg-cyan-900 p-4'>
     <h2 className='px-5 py-2 bg-cyan-950 text-gray-300 rounded-lg md:rounded-lg text-xl mx-5 m-2'>
@@ -152,7 +152,7 @@ function Portfolio1() {
         <div>
           <h1 id='project' className='text-3xl font-bold text-center text-white p-3'>My Projects</h1>
         </div>
-        <div className='grid gap-10 p-5 grid-cols-2 lg:grid-cols-3 md:grid-cols-2 px-16 w-5/6'>
+        <div className='grid gap-10 p-5 grid-cols-2 lg:grid-cols-3 md:grid-cols-2  w-5/6'>
 
 
           <a href='https://books-shop-tau.vercel.app/books' target="_blank" className='h-fit'>
