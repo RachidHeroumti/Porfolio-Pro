@@ -20,7 +20,7 @@ function AboutMe() {
       <div className="mt-6">
         <h3 className="text-xl font-bold mb-2">Education</h3>
         <div className="text-gray-700">
-          <p><span className="font-semibold">Ibn Zohr University</span>, Bachelor of Science in Computer Science, <span className="italic">2024</span></p>
+          <p><span className="font-semibold">Ibn Zohr University</span>, Bachelor  in Computer Science, <span className="italic">2024</span></p>
           <p>Relevant Coursework: Data Structures, Algorithms, Web Development, Software Engineering</p>
         </div>
       </div>
@@ -34,5 +34,7 @@ function AboutMe() {
     </div>
   );
 }
+
+
 
 export default AboutMe;
