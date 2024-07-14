@@ -14,7 +14,7 @@ import OtherSkill from '../component/OtherSkill';
 function Portfolio1() {
   return (
 
-    <div className=' bg-customDark '>
+    <div className=' bg-customDark p-2 '>
       <div className=' flex flex-col justify-center w-full  items-center'> 
         <div className=' bg-cyan-950 ' >
          <NavBar/>

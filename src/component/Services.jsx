@@ -4,14 +4,14 @@ import imgprogramer from "../image/programer.jpg"
 
 function Services() {
   return (
-    <div className=' flex  w-5/6 p-5'>
+    <div className=' flex flex-col justify-center sm:flex-row   sm:w-5/6 p-5'>
 
        <div className='w-full'> 
-            <img src={imgprogramer} alt="what i do " className='w-[500px] h-[600px] object-cover'/>
+            <img src="./img_pg.jpg" alt="what i do " className=' sm:w-full sm:h-[550px]  rounded'/>
           </div>
 
         <div className='w-full'>
-           <h1 className='text-center text-3xl text-gray-100 p-4 font-medium '>What i can do </h1> 
+           <h1 className='text-center text-3xl text-gray-100 px-4 font-medium '>What i can do </h1> 
             <div className=' '>
     <h2 className=' py-2  text-gray-400 rounded-lg md:rounded-lg text-xl mx-5 m-2'>
       <span className='text-gray-200 text-2xl'>Front-end : </span>
