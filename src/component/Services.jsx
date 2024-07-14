@@ -15,7 +15,7 @@ function Services() {
             <div className=' '>
     <h2 className=' py-2  text-gray-400 rounded-lg md:rounded-lg text-xl mx-5 m-2'>
       <span className='text-gray-200 text-2xl'>Front-end : </span>
-      Front-end: I develop the front end of websites using HTML, CSS, React.js, Next.js, 
+     I develop the front end of websites using HTML, CSS, React.js, Next.js, 
        Tailwind, and Bootstrap, ensuring responsive design and a seamless user experience.
     </h2>
     <h2 className=' py-2  text-gray-400 rounded-lg md:rounded-lg text-xl mx-5 m-2'>
