@@ -2,7 +2,7 @@ import React from 'react';
 
 function AboutMe() {
   return (
-    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" id='about'>
       <h2 className="text-2xl font-bold mb-4">About Me</h2>
       <p className="text-gray-700 text-base">
         I am a passionate Full Stack Developer with a strong foundation in Computer Science. I recently graduated from <span className="font-semibold">Ibn Zohr University</span> with a Bachelor of Science in Computer Science.

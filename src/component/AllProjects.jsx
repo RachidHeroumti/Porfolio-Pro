@@ -14,6 +14,7 @@ function AllProjects() {
       </div>
       <div className='grid gap-6 grid-col-1 sm:grid-cols-2'>
 
+
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
             <div
@@ -22,7 +23,7 @@ function AllProjects() {
               onMouseOver={() => setIsPassOnBook(true)}
             >
               <img className='h-[250px] w-[250px] rounded-full'
-                src='https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?auto=compress&cs=tinysrgb&w=300' alt='book-image' />
+                src='https://images.pexels.com/photos/4318455/pexels-photo-4318455.jpeg?auto=compress&cs=tinysrgb&w=600' alt='book-image' />
               {isPassOnBook &&
                 <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://books-shop-tau.vercel.app/books' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
@@ -39,6 +40,33 @@ function AllProjects() {
           </div>
         </div>
 
+  {/* Cabinet medical */}
+      <div className='sm:p-10'>
+          <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
+            <div
+              className='relative'
+              onMouseOut={() => setIsPassOnTaskManager(false)}
+              onMouseOver={() => setIsPassOnTaskManager(true)}
+            >
+              <img className='h-[250px] w-[250px] rounded-full'
+                src='https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
+              {isPassOnTaskManager &&
+                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                  <a href='https://cabinet-medical-pfe.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
+                  <a href='https://github.com/RachidHeroumti/Cabinet-Medical-PFE-' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
+                </div>}
+            </div>
+            <div>
+              <h1 className="text-3xl text-center py-2 font-bold text-blue-600">Cabinet Medical Website</h1>
+              <p className="p-3 text-gray-400 text-center">
+              Developed with React.js and tailwindCss for the frontend and Node.js, Express.js for the
+                 backend, using MongoDB for database management. Worked in a team to
+                      enhance frontend and backend skills and contributed significantly.
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
             <div
@@ -138,6 +166,7 @@ function AllProjects() {
             </div>
           </div>
         </div>
+  
 
       </div>
     </div>
