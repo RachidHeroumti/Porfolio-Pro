@@ -15,6 +15,30 @@ function AllProjects() {
       <div className='grid gap-6 grid-col-1 sm:grid-cols-2'>
 
 
+      <div className='sm:p-10'>
+          <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
+            <div
+              className='relative'
+              onMouseOut={() => setIsPassOnEcoStore(false)}
+              onMouseOver={() => setIsPassOnEcoStore(true)}
+            >
+              <img className='h-[250px] w-[250px] rounded-full'
+                src='https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374' alt='eco-store-image' />
+              {isPassOnEcoStore &&
+                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                  <a href='https://onlay-shop.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
+                  <a href='https://github.com/RachidHeroumti/EcoStore' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
+                </div>}
+            </div>
+            <div>
+              <h1 className="text-3xl text-center py-2 font-bold text-green-500">Eco-Store</h1>
+              <p className="p-3 text-gray-400 text-center">
+                A powerful e-commerce store website built with React.js, Node.js, Express.js, and MongoDB. This platform features a sleek user interface and efficient back-end processing, providing users with a seamless shopping experience. With advanced product management, real-time inventory updates, and comprehensive customer support, it ensures a robust and scalable solution for online retail.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
             <div
@@ -67,30 +91,7 @@ function AllProjects() {
           </div>
         </div>
         
-        <div className='sm:p-10'>
-          <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
-            <div
-              className='relative'
-              onMouseOut={() => setIsPassOnEcoStore(false)}
-              onMouseOver={() => setIsPassOnEcoStore(true)}
-            >
-              <img className='h-[250px] w-[250px] rounded-full'
-                src='https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374' alt='eco-store-image' />
-              {isPassOnEcoStore &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
-                  <a href='https://onlay-shop.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
-                  <a href='https://github.com/RachidHeroumti/EcoStore' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
-                </div>}
-            </div>
-            <div>
-              <h1 className="text-3xl text-center py-2 font-bold text-green-500">Eco-Store</h1>
-              <p className="p-3 text-gray-400 text-center">
-                A powerful e-commerce store website built with React.js, Node.js, Express.js, and MongoDB. This platform features a sleek user interface and efficient back-end processing, providing users with a seamless shopping experience. With advanced product management, real-time inventory updates, and comprehensive customer support, it ensures a robust and scalable solution for online retail.
-              </p>
-            </div>
-          </div>
-        </div>
-
+       
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
             <div
