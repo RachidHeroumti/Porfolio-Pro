@@ -10,7 +10,7 @@ function Skills() {
   return (
     <div className='w-5/6'>
        <div className=''>
-          <h1 className='text-3xl font-bold text-center text-white p-5'>My Skills</h1>
+          <h1 className='text-3xl font-semiblod text-center text-white p-5'>My <span className=' text-sky-500'>Skills</span></h1>
         </div>
         <div className='grid gap-10 p-5 lg:grid-cols-3 md:grid-cols-2   '>
           <div className=' shadow-lg rounded-lg flex flex-col  border  border-gray-500

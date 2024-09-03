@@ -4,13 +4,18 @@ import { AiFillInstagram, AiFillGithub, AiFillFacebook } from "react-icons/ai"
 function NavBar() {
   return (
   
-       <div className='w-full text-gray-50  flex  items-center bg-customDark 
-            p-4 px-12 fixed top-0 right-0 z-50 justify-center space-x-2'>
-            <a href='#home' className='p-2   hover:text-gray-300 hover:bg-cyan-900'>Home</a>
-            <a href='#project' className='p-2 hover:text-gray-300 hover:bg-cyan-900'>Projects</a>
-            <a href='#about' className='p-2 hover:text-gray-300 hover:bg-cyan-900'>AboutMe</a>
-            <a href='#contact' className='p-2 hover:text-gray-300 hover:bg-cyan-900'>Contact</a>
-        
+       <div className='w-full text-gray-50  flex  justify-between bg-customDark 
+            p-4 px-12 fixed top-0 right-0 z-50  space-x-2 text-xl '>
+              <div>
+                <h1 className=' text-2xl font-bold underline decoration-wavy'>R.Herou</h1>
+              </div>
+              <div>
+              <a href='#home' className='p-2   hover:text-sky-500 '>Home</a>
+              <a href='#project' className='p-2  hover:text-sky-500'>Projects</a>
+              <a href='#about' className='p-2  hover:text-sky-500'>About</a>
+              <a href='#contact' className='p-2  hover:text-sky-500'>Contact</a>
+              </div>
+           
           </div>
     
   )

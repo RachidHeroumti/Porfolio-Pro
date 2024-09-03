@@ -8,9 +8,9 @@ function AllProjects() {
   const [isPassOnTaskManager, setIsPassOnTaskManager] = useState(false);
 
   return (
-    <div className='sm:w-5/6 flex justify-center flex-col sm:p-10 space-y-1 sm:space-y-5'>
+    <div className='sm:w-5/6 flex justify-center flex-col sm:p-10 space-y-1 sm:space-y-5' id='project'>
       <div className='p-3'>
-        <h1 id='project' className='text-3xl font-bold text-center text-white p-3'>My Projects</h1>
+        <h1  className='text-3xl font-bold text-center text-white p-3'>My <span className=' text-sky-500 font-semibold'>Projects</span></h1>
       </div>
       <div className='grid gap-6 grid-col-1 sm:grid-cols-2'>
 

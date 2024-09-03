@@ -8,6 +8,7 @@ import Skills from '../component/Skills';
 import Services from '../component/Services';
 import AboutMe from '../component/AboutMe';
 import OtherSkill from '../component/OtherSkill';
+import Contact from '../component/Contact';
 
 
 
@@ -28,11 +29,7 @@ function Portfolio1() {
   
       <AboutMe/>
       </div>
-
-
-
-
-
+      <Contact/>
       <div className='border-t-2 border-gray-300 flex flex:col md:flex-row md:justify-between py-5 text-sm'>
         <div className='mb-4 text-white'>
           <a href='#' className='mx-2.5'>About</a>
