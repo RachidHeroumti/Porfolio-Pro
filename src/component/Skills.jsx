@@ -69,6 +69,22 @@ function Skills() {
             </div>
           </div>
 
+          <div className=' shadow-lg rounded-lg flex flex-col  border  border-gray-500
+              text-gray-300'>
+            <div className='h-[150px] flex justify-center items-center'>
+              <BiCodeBlock size={50} className=' text-white' />
+            </div>
+            <div className='h-full space-y-1 p-2'>
+              <h1 className=' text-2xl text-center text-gray-100 font-semibold'>Othe Tools </h1>
+              <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> Git&Gthub</h1>
+              <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span> Docker</h1>
+              <h1><span className='text-gray-400 px-2 pe-3'>{">> "}</span>Figma</h1>
+              <h1 className=' flex flex-col'> <span className='text-gray-400 px-2 pe-3'>{">> " }Current Learning About</span>
+                <span className='px-5 sm:px-8 text-gray-400  '> CI/CD $ DevOpps</span>
+              
+              </h1>
+            </div>
+          </div>
 
 
         </div>
