@@ -9,9 +9,9 @@ import { MdOutlineEmail } from 'react-icons/md'
 function Hero() {
   return (
     <div className=' flex items-center bg-customDark h-[90%]  sm:p-20 flex-col md:flex-row  md:justify-between py-12 ' id='home'>
-    <div className='text-gray-50 sm:p-5 text-2xl space-y-5 w-full'>
-      <h1 className='text-5xl text-gray-200 py-4  font-bold '>Hi ,I'am Rachid</h1>
-      <h2 className='text-3xl py-2 font-medium '>A passionate Full Stack Software Developer 🚀 having an experience of
+    <div className='text-gray-50 p-2 sm:p-5 text-2xl space-y-5 w-full'>
+      <h1 className='text-3xl sm:text-5xl text-gray-200 py-4  font-bold '>Hi ,I'am Rachid</h1>
+      <h2 className='text-xl sm:text-3xl py-2 font-medium '>A passionate Full Stack Software Developer 🚀 having an experience of
          building Web and Mobile applications with JavaScript
          / Reactjs / Nodejs /Java/Kotlin and some other cool libraries and frameworks.</h2>
 
