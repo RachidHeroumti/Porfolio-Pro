@@ -32,7 +32,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-green-500">Eco-Store</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
                 A powerful e-commerce store website built with React.js, Node.js, Express.js, and MongoDB. This platform features a sleek user interface and efficient back-end processing, providing users with a seamless shopping experience. With advanced product management, real-time inventory updates, and comprehensive customer support, it ensures a robust and scalable solution for online retail.
               </p>
             </div>
@@ -56,7 +56,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-orange-600">Book Shop</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
                 BookShop is an online store where you can find the best books, offering a wide range of genres to cater to every reader's taste.
                 It was built using technologies such as Next.js, Tailwind CSS, TypeScript, Node.js, Express.js, and MySQL, with PayPal integration for secure payments.
               </p>
@@ -82,7 +82,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-blue-600">Cabinet Medical Website</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
               Developed with React.js and tailwindCss for the frontend and Node.js, Express.js for the
                  backend, using MongoDB for database management. Worked in a team to
                       enhance frontend and backend skills and contributed significantly.
@@ -109,7 +109,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-red-800">Chat App</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
                 A real-time chat application built with React.js and Node.js, enabling users to communicate instantly with friends and family. This app features a responsive design, secure authentication, and efficient message handling, making it a reliable and user-friendly communication tool.
               </p>
             </div>
@@ -133,7 +133,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-orange-600">DeliveryFood</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
                 The client-side of our delivery food website is crafted using React.js and Tailwind CSS.
                 Enjoy a user-friendly interface with responsive design, intuitive navigation,
                 and seamless integration for ordering your favorite meals online.
@@ -159,7 +159,7 @@ function AllProjects() {
             </div>
             <div>
               <h1 className="text-3xl text-center py-2 font-bold text-red-900">Task Manager</h1>
-              <p className="p-3 text-gray-400 text-center">
+              <p className="p-3 text-gray-400 w-full">
                 Discover a simple and efficient Todo List application, developed with Next.js and Firebase.
                 Enjoy streamlined task management with real-time updates,
                 intuitive user interface, and seamless integration for enhanced productivity.

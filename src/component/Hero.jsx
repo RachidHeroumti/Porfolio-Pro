@@ -4,6 +4,8 @@ import { AiFillInstagram, AiFillGithub, AiFillFacebook } from 'react-icons/ai';
 import { BsLinkedin } from 'react-icons/bs';
 import { ImWhatsapp } from 'react-icons/im';
 import { MdOutlineEmail } from 'react-icons/md';
+import { FiDownload } from "react-icons/fi";
+
 
 function Hero() {
   const [displayedText, setDisplayedText] = useState('');
@@ -34,27 +36,41 @@ function Hero() {
           building Web and Mobile applications with JavaScript / Reactjs / Nodejs / Java / Kotlin and some other cool libraries and frameworks.
         </h2>
 
+        <div className=''>
         <div className='flex justify-center items-center text-white p-5 space-x-3' >
        
-          <a href='https://www.linkedin.com/in/rachid-heroumti-817787243/'>
-            <img src='/linkedin.png' alt='LinkedIn' className='w-[45px] h-[45px]' />
-          </a>
-          <a href='https://github.com/RachidHeroumti' target='_blank'>
-            <img src='/github.png' alt='GitHub' className='w-[45px] h-[45px] bg-white rounded-full object-cover' />
-          </a>
+       <a href='https://www.linkedin.com/in/rachid-heroumti-817787243/'>
+         <img src='/linkedin.png' alt='LinkedIn' className='w-[45px] h-[45px]' />
+       </a>
+       <a href='https://github.com/RachidHeroumti' target='_blank'>
+         <img src='/github.png' alt='GitHub' className='w-[45px] h-[45px] bg-white rounded-full object-cover' />
+       </a>
+      
+       <a href='mailto:rachidheroumti0@gmail.com' target='_blank' className=''>
+         <img src='/mail.png' alt='Email' className='w-[45px] h-[45px]' />
          
-          <a href='mailto:rachidheroumti0@gmail.com' target='_blank' className=''>
-            <img src='/mail.png' alt='Email' className='w-[45px] h-[45px]' />
-            
-          </a>
-       
-          <a href=''>
-            <img src='/whatsapp.png' alt='WhatsApp' className='w-[45px] h-[45px]' />
-          </a>
-          <a href='' target='_blank' className='bg-blue-600 rounded-full'>
-            <img src='/fecebook.png' alt='Facebook' className='w-[45px] h-[45px]' />
-          </a>
+       </a>
+    
+       <a href=''>
+         <img src='/whatsapp.png' alt='WhatsApp' className='w-[45px] h-[45px]' />
+       </a>
+       <a href='' target='_blank' className='bg-blue-600 rounded-full'>
+         <img src='/fecebook.png' alt='Facebook' className='w-[45px] h-[45px]' />
+       </a>
         </div>
+        <div className=' flex justify-center items-center space-x-2'>
+        
+  <a href="/assets/ResumeHero.pdf" download="ResumeHero.pdf">
+    <button className='bg-sky-500 rounded-md p-2 text-white hover:opacity-50'>
+      Download Resume
+    </button>
+  </a>
+
+          <FiDownload size={30} className=' text-sky-500 '>
+          </FiDownload>
+        </div>
+        </div>
+        
         
       </div>
       <div className='w-full m-auto flex justify-center'>
