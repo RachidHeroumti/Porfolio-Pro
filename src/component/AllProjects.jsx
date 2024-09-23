@@ -22,10 +22,10 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnEcoStore(false)}
               onMouseOver={() => setIsPassOnEcoStore(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374' alt='eco-store-image' />
               {isPassOnEcoStore &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                <div className='absolute top-0 w-full h-full  items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://onlay-shop.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
                   <a href='https://github.com/RachidHeroumti/EcoStore' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
                 </div>}
@@ -46,10 +46,10 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnBook(false)}
               onMouseOver={() => setIsPassOnBook(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='https://images.pexels.com/photos/4318455/pexels-photo-4318455.jpeg?auto=compress&cs=tinysrgb&w=600' alt='book-image' />
               {isPassOnBook &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                <div className='absolute top-0 w-full h-full  items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://books-shop-tau.vercel.app/books' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
                   <a href='https://github.com/RachidHeroumti/Books' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
                 </div>}
@@ -72,10 +72,10 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnTaskManager(false)}
               onMouseOver={() => setIsPassOnTaskManager(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
               {isPassOnTaskManager &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                <div className='absolute top-0 w-full h-full  items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://cabinet-medical-pfe.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
                   <a href='https://github.com/RachidHeroumti/Cabinet-Medical-PFE-' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
                 </div>}
@@ -99,7 +99,7 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnChatApp(false)}
               onMouseOver={() => setIsPassOnChatApp(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='./chat_icon.png' alt='chat-app-image' />
               {isPassOnChatApp &&
                 <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
@@ -123,10 +123,10 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnDeliveryFood(false)}
               onMouseOver={() => setIsPassOnDeliveryFood(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='https://images.pexels.com/photos/4392036/pexels-photo-4392036.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
               {isPassOnDeliveryFood &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                <div className='absolute top-0 w-full h-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://deliveryfood-xg3z.onrender.com/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
                   <a href='https://github.com/RachidHeroumti/Delivary-food-client' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
                 </div>}
@@ -149,10 +149,10 @@ function AllProjects() {
               onMouseOut={() => setIsPassOnTaskManager(false)}
               onMouseOver={() => setIsPassOnTaskManager(true)}
             >
-              <img className='h-[250px] w-[250px] rounded-full'
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
                 src='https://images.pexels.com/photos/5717454/pexels-photo-5717454.jpeg?auto=compress&cs=tinysrgb&w=300' alt='' />
               {isPassOnTaskManager &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                <div className='absolute top-0 w-full h-full  items-center justify-center flex flex-col space-y-1 bg-white/40'>
                   <a href='https://work-list-omega.vercel.app/' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
                   <a href='https://github.com/RachidHeroumti/DWM-Tasks' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
                 </div>}
