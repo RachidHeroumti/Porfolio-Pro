@@ -60,14 +60,16 @@ function Hero() {
         </div>
         <div className=' flex justify-center items-center space-x-2'>
         
-  <a href="/assets/ResumeHero.pdf" download="ResumeHero.pdf">
-    <button className='bg-sky-500 rounded-md p-2 text-white hover:opacity-50'>
+  <a href="/assets/ResumeHero.pdf" download="ResumeHero.pdf" className='flex  space-x-1 bg-sky-500 rounded-md p-2
+     text-white hover:opacity-70 hover:shadow-md shadow-sky-600 items-center' >
+    <button className=' '>
       Download Resume
     </button>
+    <FiDownload size={30} className=' text-sky-50 '>
+    </FiDownload>
   </a>
 
-          <FiDownload size={30} className=' text-sky-500 '>
-          </FiDownload>
+        
         </div>
         </div>
         
