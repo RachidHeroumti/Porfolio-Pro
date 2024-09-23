@@ -33,7 +33,7 @@ function Hero() {
         </h1>
         <h2 className='text-xl sm:text-3xl py-2 font-medium'>
           A passionate <span className=' font-bold text-sky-500'>Full Stack Software Developer</span>  🚀 having an experience of
-          building Web and Mobile applications with JavaScript / Reactjs / Nodejs / Java / Kotlin and some other cool libraries and frameworks.
+          building  applications with JavaScript /Java/ Reactjs / Nodejs / Spring-Boot /NextJs /SQl and some other cool libraries and frameworks.
         </h2>
 
         <div className=''>
