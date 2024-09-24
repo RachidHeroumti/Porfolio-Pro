@@ -12,7 +12,7 @@ const Contact = () => {
               <div className="mb-12 max-w-[570px] lg:mb-0">
                 
                 <h2 className="mb-6 text-[32px] font-bold uppercase text-dark dark:text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]">
-                  Contact Us
+                  Contact Me
                 </h2>
                 <div className="mb-8 flex w-full max-w-[370px]">
                  
