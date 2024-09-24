@@ -91,31 +91,6 @@ function AllProjects() {
           </div>
         </div>
         
-       
-        <div className='sm:p-10'>
-          <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
-            <div
-              className='relative'
-              onMouseOut={() => setIsPassOnChatApp(false)}
-              onMouseOver={() => setIsPassOnChatApp(true)}
-            >
-              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
-                src='./chat_icon.png' alt='chat-app-image' />
-              {isPassOnChatApp &&
-                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
-                  <a href='https://chatapp-lfc6.onrender.com' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
-                  <a href='https://github.com/RachidHeroumti/Chat-App' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
-                </div>}
-            </div>
-            <div>
-              <h1 className="text-3xl text-center py-2 font-bold text-red-800">Chat App</h1>
-              <p className="p-3 text-gray-400 w-full">
-                A real-time chat application built with React.js and Node.js, enabling users to communicate instantly with friends and family. This app features a responsive design, secure authentication, and efficient message handling, making it a reliable and user-friendly communication tool.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
             <div
@@ -141,6 +116,32 @@ function AllProjects() {
             </div>
           </div>
         </div>
+        
+        <div className='sm:p-10'>
+          <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
+            <div
+              className='relative'
+              onMouseOut={() => setIsPassOnChatApp(false)}
+              onMouseOver={() => setIsPassOnChatApp(true)}
+            >
+              <img className='h-[250px] w-[250px]  xl:h-[300px] xl:w-[350px] rounded'
+                src='./chat_icon.png' alt='chat-app-image' />
+              {isPassOnChatApp &&
+                <div className='absolute top-0 w-full h-full rounded-full items-center justify-center flex flex-col space-y-1 bg-white/40'>
+                  <a href='https://chatapp-lfc6.onrender.com' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Demo</a>
+                  <a href='https://github.com/RachidHeroumti/Chat-App' target="_blank" className='text-gray-700 text-2xl font-bold sm:px-5 p-1 hover:bg-gray-300'>Repo</a>
+                </div>}
+            </div>
+            <div>
+              <h1 className="text-3xl text-center py-2 font-bold text-red-800">Chat App</h1>
+              <p className="p-3 text-gray-400 w-full">
+                A real-time chat application built with React.js and Node.js, enabling users to communicate instantly with friends and family. This app features a responsive design, secure authentication, and efficient message handling, making it a reliable and user-friendly communication tool.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      
 
         <div className='sm:p-10'>
           <div className='rounded-lg flex flex-col md:p-10 justify-center items-center'>
