@@ -15,22 +15,21 @@ import Contact from '../component/Contact';
 function Portfolio1() {
   return (
 
-    <div className=' bg-customDark p-2 '>
+    <div className=' bg-customDark p-2 font-poppins font-normal text-[15px]'>
       <div className=' flex flex-col justify-center w-full  items-center'> 
-        <div className=' bg-cyan-950 ' >
+        <div className=' bg-cyan-950 '>
          <NavBar/>
          <Hero/>
         </div>
 
-
        <Skills/>
        <Services/>
       <AllProjects/>
-  
+      <Contact/>
       <AboutMe/>
       </div>
-      <Contact/>
-      <div className='border-t-2 border-gray-300 flex flex:col md:flex-row md:justify-between py-5 text-sm'>
+   
+      <div className=' border-t-2 border-gray-300 flex flex:col md:flex-row md:justify-between py-5 text-sm'>
         <div className='mb-4 text-white'>
           <a href='#' className='mx-2.5'>About</a>
           <a href='#' className='mx-2.5'>Privacy Policy</a>

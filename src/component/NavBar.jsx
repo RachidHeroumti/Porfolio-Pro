@@ -1,24 +1,37 @@
-import React from 'react'
-import { AiFillInstagram, AiFillGithub, AiFillFacebook } from "react-icons/ai"
+import React from 'react';
+import { AiFillInstagram, AiFillGithub, AiFillFacebook } from "react-icons/ai";
 
 function NavBar() {
   return (
-  
-       <div className='w-full text-gray-50  flex  justify-between bg-customDark 
-           p-2 sm:p-4 sm:px-12 fixed top-0 right-0 z-50  text-xl '>
-              <div className='hidden sm:flex'>
-                <a href='#home' className=' text-2xl font-bold underline decoration-wavy'>R.Herou</a>
-              </div>
-              <div className=' space-x-1 sm:space-x-3'>
-              <a href='#home' className='p-2   hover:text-sky-500 '>Home</a>
-              <a href='#project' className='p-2  hover:text-sky-500'>Projects</a>
-              <a href='#about' className='p-2  hover:text-sky-500'>About</a>
-              <a href='#contact' className='p-2  hover:text-sky-500'>Contact</a>
-              </div>
-           
-          </div>
-    
-  )
+    <div className='w-full px-[36px] text-gray-50 flex justify-between items-center bg-customDark h-20 shadow  fixed top-0 right-0 z-50 text-[16px] font-poppins font-normal'>
+      <div className='hidden sm:flex'>
+      <a href="#home" className="flex items-center">
+   <img src='./logo.png 'alt='logo' className='w-[150px]  object-cover'/>
+</a>
+
+      </div>
+      <div className='flex justify-between sm:w-1/4 me-[20px]'>
+        <NavLink href='#home'>Home</NavLink>
+        <NavLink href='#project'>Projects</NavLink>
+        <NavLink href='#about'>About</NavLink>
+        <NavLink href='#contact'>Contact</NavLink>
+      </div>
+    </div>
+  );
 }
 
-export default NavBar
+function NavLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      className='relative text-white group '
+    >
+      {children}
+      <span
+        className='absolute left-0 bottom-0 w-full h-0.5 bg-sky-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out'
+      />
+    </a>
+  );
+}
+
+export default NavBar;
