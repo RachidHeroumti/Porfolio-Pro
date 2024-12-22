@@ -17,7 +17,7 @@ function AllProjects() {
           description="A powerful e-commerce store website built with React.js, Node.js, Express.js, and MongoDB. It features real-time inventory updates and a seamless shopping experience."
           imageUrl="https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374"
           demoLink="https://onlay-shop.onrender.com/"
-          repoLink="https://github.com/RachidHeroumti/EcoStore"
+          repoLink="https://github.com/RachidHeroumti/Full-stack-Ecomerce-store"
           setHoveredProject={setHoveredProject}
           isHovered={hoveredProject === 'Eco-Store'}
         />
