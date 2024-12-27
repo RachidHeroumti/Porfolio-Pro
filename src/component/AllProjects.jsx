@@ -13,6 +13,24 @@ function AllProjects() {
       <div className="grid gap-10 sm:grid-cols-2">
         {/* Eco Store */}
         <ProjectCard
+          title="Atlas"
+          description="Theme for storeino stores "
+          imageUrl="https://storeino-files.b-cdn.net/themes/atlas.png"
+          demoLink="https://atlas-theme.storeino.com/"
+          repoLink="https://github.com/RachidHeroumti"
+          setHoveredProject={setHoveredProject}
+          isHovered={hoveredProject === 'Atlas'}
+        />
+          <ProjectCard
+          title="Prestige"
+          description="Theme for store stores "
+          imageUrl="https://storeno.b-cdn.net/stores/11-2024/1731335307001.png"
+          demoLink="https://prestige-theme.storeino.com/"
+          repoLink="https://github.com/RachidHeroumti"
+          setHoveredProject={setHoveredProject}
+          isHovered={hoveredProject === 'Prestige'}
+        />
+        <ProjectCard
           title="Eco-Store"
           description="A powerful e-commerce store website built with React.js, Node.js, Express.js, and MongoDB. It features real-time inventory updates and a seamless shopping experience."
           imageUrl="https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374"
@@ -21,6 +39,7 @@ function AllProjects() {
           setHoveredProject={setHoveredProject}
           isHovered={hoveredProject === 'Eco-Store'}
         />
+
         
         {/* Book Shop */}
         <ProjectCard
