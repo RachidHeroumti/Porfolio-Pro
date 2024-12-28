@@ -10,7 +10,7 @@ function NavBar() {
 </a>
 
       </div>
-      <div className='flex justify-between sm:w-1/4 me-[20px]'>
+      <div className='flex justify-between w-full sm:w-1/4 me-[20px]'>
         <NavLink href='#home'>Home</NavLink>
         <NavLink href='#project'>Projects</NavLink>
         <NavLink href='#about'>About</NavLink>

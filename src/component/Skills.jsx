@@ -59,11 +59,11 @@ function Skills() {
   ];
 
   return (
-    <div className="w-5/6 mx-auto">
+    <div className=" w-full md:w-5/6 mx-auto">
       <div className="text-center">
         <h1 className="text-3xl font-semibold text-white p-5">My <span className="text-sky-500">Skills</span></h1>
       </div>
-      <div className="grid gap-10 p-5 lg:grid-cols-3 md:grid-cols-2">
+      <div className="grid gap-10  lg:grid-cols-3 md:grid-cols-2">
         {skills.map((skill, index) => (
           <div
           key={index}

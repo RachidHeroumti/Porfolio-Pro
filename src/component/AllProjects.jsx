@@ -10,11 +10,11 @@ function AllProjects() {
           My <span className="text-sky-500">Projects</span>
         </h1>
       </div>
-      <div className="grid gap-10 sm:grid-cols-2">
+      <div className="grid gap-10 sm:grid-cols-3">
         {/* Eco Store */}
         <ProjectCard
           title="Atlas"
-          description="Theme for storeino stores "
+          description="I developed Theme Atlas for Storeino using Vue.js , featuring search and filter, product pages, a shopping cart, and blogs. It supports multi-language and multi-currency for global usability.  "
           imageUrl="https://storeino-files.b-cdn.net/themes/atlas.png"
           demoLink="https://atlas-theme.storeino.com/"
           repoLink="https://github.com/RachidHeroumti"
@@ -23,7 +23,7 @@ function AllProjects() {
         />
           <ProjectCard
           title="Prestige"
-          description="Theme for store stores "
+          description="I developed Theme Prestige for Storeino using Vue.js , featuring search and filter, product pages, a shopping cart, and blogs. It supports multi-language and multi-currency for global usability."
           imageUrl="https://storeno.b-cdn.net/stores/11-2024/1731335307001.png"
           demoLink="https://prestige-theme.storeino.com/"
           repoLink="https://github.com/RachidHeroumti"
@@ -91,30 +91,48 @@ function AllProjects() {
 
 const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHoveredProject, isHovered }) => (
   <div
-    className="rounded-lg flex flex-col justify-center items-center bg-gray-800 p-6 hover:shadow-xl transition-all duration-300 hover:scale-110"
+    className="rounded-lg flex flex-col items-center bg-gray-800 hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden"
     onMouseEnter={() => setHoveredProject(title)}
     onMouseLeave={() => setHoveredProject(null)}
   >
-    <div className="relative">
-      <img 
-        className="h-[250px] w-[250px] xl:h-[300px] xl:w-[350px] rounded shadow-md transition-transform transform hover:scale-105"
-        src={imageUrl} 
-        alt={`${title}-image`} 
+    {/* Image Container */}
+    <div className="relative w-full">
+      <img
+        className="h-[250px] w-full rounded-t-lg xl:h-[300px] object-cover shadow-md transition-transform transform hover:scale-105"
+        src={imageUrl}
+        alt={`${title}-image`}
       />
+
+      {/* Hover Overlay with Links */}
       {isHovered && (
-        <div className="absolute top-0 w-full h-full flex flex-col items-center justify-center space-y-2 bg-black bg-opacity-50 rounded">
-          <a href={demoLink} target="_blank" rel="noopener noreferrer" className="text-white text-xl font-bold p-2 bg-green-600 rounded hover:bg-green-700 transition duration-200">
+        <div className="absolute top-0 w-full h-full flex flex-col items-center justify-center space-y-4 bg-black bg-opacity-75 rounded-t-lg">
+          <a
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-xl font-semibold px-6 py-2 bg-green-600 rounded-lg hover:bg-green-700 transition duration-200"
+          >
             Demo
           </a>
-          <a href={repoLink} target="_blank" rel="noopener noreferrer" className="text-white text-xl font-bold p-2 bg-blue-600 rounded hover:bg-blue-700 transition duration-200">
+          <a
+            href={repoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-xl font-semibold px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition duration-200"
+          >
             Repo
           </a>
         </div>
       )}
     </div>
-    <h1 className="text-3xl text-center py-4 font-bold text-green-500">{title}</h1>
-    <p className="text-gray-400 text-center">{description}</p>
+
+    {/* Project Details */}
+    <div className="p-6 text-center">
+      <h1 className="text-3xl font-bold text-green-500 mb-4">{title}</h1>
+      <p className="text-gray-400 text-lg">{description}</p>
+    </div>
   </div>
 );
+
 
 export default AllProjects;
