@@ -1,49 +1,50 @@
 import React from "react";
-import { FaPhoneVolume, FaEnvelope } from "react-icons/fa";
+import { FaPhoneVolume, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section className=" relative container z-10 overflow-hidden bg-customDark text-white py-20 dark:bg-dark lg:py-[120px]" id="contact">
-      <div className="container">
-        <div className="-mx-4 w-full  flex flex-wrap lg:justify-between p-5">
-          <div className="w-full px-4 ">
-          <h2 className="mb-6 text-3xl font-bold uppercase text-dark dark:text-white sm:text-4xl lg:text-3xl xl:text-4xl">
-                Contact Me
-              </h2>
-            <div className="mb-12  flex w-full justify-between">
+    <section 
+      className="w-full py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 text-white overflow-hidden" 
+      id="contact"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+            Contact <span className="relative inline-block">
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
+                Me
+              </span>
+              <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            </span>
+          </h2>
+          <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
+            Let’s connect—whether it’s a project idea or just to say hi!
+          </p>
+        </div>
 
-              {/* Phone Number */}
-              <ContactMethod 
-                icon={<FaPhoneVolume size={28} />} 
-                title="Phone Number" 
-                detail="(+212) 616421373" 
-              />
+        {/* Contact Methods */}
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Phone Number */}
+          <ContactMethod 
+            icon={<FaPhoneVolume size={28} className="text-cyan-400" />} 
+            title="Phone" 
+            detail="(+212) 616-421-373" 
+          />
 
-              {/* Email Address */}
-              <ContactMethod 
-                icon={<FaEnvelope size={28} />} 
-                title="Email Address" 
-                detail="rachidheroumti0@gmail.com" 
-              />
+          {/* Email Address */}
+          <ContactMethod 
+            icon={<FaEnvelope size={28} className="text-cyan-400" />} 
+            title="Email" 
+            detail="rachidheroumti0@gmail.com" 
+          />
 
-              {/* Fake Address */}
-              <ContactMethod 
-                icon={
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M16 3C13.4 3 11 5.1 11 8.5c0 4.7 5 10.5 5 10.5s5-5.8 5-10.5C21 5.1 18.6 3 16 3zm0 13c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
-                  </svg>
-                } 
-                title="Location" 
-                detail="Agadir, Morocco" 
-              />
-            </div>
-          </div>
+          {/* Location */}
+          <ContactMethod 
+            icon={<FaMapMarkerAlt size={28} className="text-cyan-400" />} 
+            title="Location" 
+            detail="Agadir, Morocco" 
+          />
         </div>
       </div>
     </section>
@@ -52,13 +53,20 @@ const Contact = () => {
 
 const ContactMethod = ({ icon, title, detail }) => {
   return (
-    <div className="mb-8 flex w-full max-w-[370px] bg-gray-800 p-4 rounded-lg">
-      <div className="mr-4 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/5 text-primary">
-        {icon}
-      </div>
-      <div className="w-full">
-        <h4 className="mb-1 text-xl font-bold text-white">{title}</h4>
-        <p className="text-base text-gray-400">{detail}</p>
+    <div 
+      className="group bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/30 
+                 transform transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]"
+    >
+      <div className="flex items-center gap-4">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors duration-300">
+          {icon}
+        </div>
+        <div className="flex-1">
+          <h4 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
+            {title}
+          </h4>
+          <p className="text-sm text-gray-300 mt-1">{detail}</p>
+        </div>
       </div>
     </div>
   );

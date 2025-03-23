@@ -15,16 +15,15 @@ import Contact from '../component/Contact';
 function Portfolio1() {
   return (
 
-    <div className=' bg-customDark p-2 font-poppins font-normal text-[15px]'>
+    <div className=' bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 p-2 font-poppins font-normal text-[15px]'>
       <div className=' flex flex-col justify-center w-full  items-center'> 
-        <div className=' bg-cyan-950 '>
+        <div className=''>
          <NavBar/>
          <Hero/>
         </div>
 
        <Skills/>
        <Services/>
-      <AllProjects/>
       <Contact/>
       <AboutMe/>
       </div>
