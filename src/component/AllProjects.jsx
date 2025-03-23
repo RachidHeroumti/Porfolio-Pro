@@ -6,7 +6,7 @@ function AllProjects() {
   return (
     <div 
       className="w-full min-h-screen flex flex-col items-center py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 mt-10" 
-      id="project"
+      id="projects"
     >
       {/* Header Section */}
       <div className="relative mb-20 text-center">

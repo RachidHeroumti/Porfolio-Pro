@@ -24,6 +24,7 @@ function Portfolio1() {
 
        <Skills/>
        <Services/>
+       <AllProjects/>
       <Contact/>
       <AboutMe/>
       </div>

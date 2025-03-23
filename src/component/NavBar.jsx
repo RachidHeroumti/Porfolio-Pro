@@ -19,10 +19,10 @@ function NavBar() {
 
 
       <div className="flex items-center gap-6 lg:gap-10">
-        <NavLink href="/">Home</NavLink>
-        <NavLink href='/projects'>Projects</NavLink>
-        <NavLink href="/#about">About</NavLink>
-        <NavLink href="/#contact">Contact</NavLink>
+        <NavLink href="#home">Home</NavLink>
+        <NavLink href='#projects'>Projects</NavLink>
+        <NavLink href="#about">About</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
       </div>
 
       <div className="hidden md:flex items-center gap-5">
