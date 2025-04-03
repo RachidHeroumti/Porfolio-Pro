@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import dashboardPicture from '../image/dasboard.png'
 function AllProjects() {
   const [hoveredProject, setHoveredProject] = useState(null);
 
@@ -35,6 +35,16 @@ function AllProjects() {
           setHoveredProject={setHoveredProject}
           isHovered={hoveredProject === 'Atlas'}
         />
+           {/* Dashboard */}
+           <ProjectCard
+   title="Dashboard Admin"
+   description="A powerful admin dashboard built with React.js and Tailwind CSS, integrated with an Express.js and MongoDB backend. Features include real-time data visualization, user management, and responsive design for seamless business operations."
+   imageUrl={dashboardPicture}
+   demoLink="https://ecommerce-dashboard-fawn-six.vercel.app"
+   repoLink="https://github.com/RachidHeroumti"
+   setHoveredProject={setHoveredProject}
+   isHovered={hoveredProject === 'Dashboard Admin'}
+ />
 
         {/* Prestige */}
         <ProjectCard
