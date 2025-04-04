@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
-import dashboardPicture from '../image/dasboard.png'
+import React, { useState } from "react";
+import dashboardPicture from "../image/dasboard.png";
+import cosaPic from "../image/cosaluxePic.png";
 function AllProjects() {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
-    <div 
-      className="w-full min-h-screen flex flex-col items-center py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 mt-10" 
+    <div
+      className="w-full min-h-screen flex flex-col items-center py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 mt-10"
       id="projects"
     >
       {/* Header Section */}
       <div className="relative mb-20 text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
-          My <span className="relative inline-block">
+          My{" "}
+          <span className="relative inline-block">
             <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
               Projects
             </span>
@@ -19,13 +21,25 @@ function AllProjects() {
           </span>
         </h1>
         <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-          Explore my handcrafted creations—where innovation meets seamless functionality.
+          Explore my handcrafted creations—where innovation meets seamless
+          functionality.
         </p>
       </div>
 
       {/* Projects Grid */}
       <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-6">
-        {/* Atlas */}
+        {/* CosaLuxe */}
+        <ProjectCard
+          title="Website for cosaluxe "
+          description="A dynamic and robust website designed for the CosaLuxe brand to showcase and sell their products, featuring multilingual support and an elegant, user-friendly design."
+          imageUrl={cosaPic}
+          demoLink="https://www.cosaluxe.ma"
+          repoLink="https://github.com/RachidHeroumti"
+          setHoveredProject={setHoveredProject}
+          isHovered={hoveredProject === "cosaluxe"}
+          isnew={true}
+        />
+
         <ProjectCard
           title="Atlas"
           description="A stunning Vue.js-powered theme for Storeino, delivering lightning-fast search, dynamic filters, immersive product pages, and a sleek cart—crafted for global reach with multi-language and currency support."
@@ -33,18 +47,19 @@ function AllProjects() {
           demoLink="https://atlas-theme.storeino.com/"
           repoLink="https://github.com/RachidHeroumti"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Atlas'}
+          isHovered={hoveredProject === "Atlas"}
         />
-           {/* Dashboard */}
-           <ProjectCard
-   title="Dashboard Admin"
-   description="A powerful admin dashboard built with React.js and Tailwind CSS, integrated with an Express.js and MongoDB backend. Features include real-time data visualization, user management, and responsive design for seamless business operations."
-   imageUrl={dashboardPicture}
-   demoLink="https://ecommerce-dashboard-fawn-six.vercel.app"
-   repoLink="https://github.com/RachidHeroumti"
-   setHoveredProject={setHoveredProject}
-   isHovered={hoveredProject === 'Dashboard Admin'}
- />
+        {/* Dashboard */}
+        <ProjectCard
+          title="Dashboard Admin"
+          description="A powerful admin dashboard built with React.js and Tailwind CSS, integrated with an Express.js and MongoDB backend. Features include real-time data visualization, user management, and responsive design for seamless business operations."
+          imageUrl={dashboardPicture}
+          demoLink="https://ecommerce-dashboard-fawn-six.vercel.app"
+          repoLink="https://github.com/RachidHeroumti"
+          setHoveredProject={setHoveredProject}
+          isHovered={hoveredProject === "Dashboard Admin"}
+          isnew={true}
+        />
 
         {/* Prestige */}
         <ProjectCard
@@ -54,19 +69,18 @@ function AllProjects() {
           demoLink="https://prestige-theme.storeino.com/"
           repoLink="https://github.com/RachidHeroumti"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Prestige'}
+          isHovered={hoveredProject === "Prestige"}
         />
-           {/* Cabinet Medical */}
-           <ProjectCard
+        {/* Cabinet Medical */}
+        <ProjectCard
           title="Cabinet Medical"
           description="A cutting-edge medical platform crafted with React.js, Tailwind CSS, Node.js, and MongoDB—streamlining patient care with a clean, professional interface and robust backend."
           imageUrl="https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600"
           demoLink="https://cabinet-medical-pfe.onrender.com/"
           repoLink="https://github.com/RachidHeroumti/Cabinet-Medical-PFE-"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Cabinet Medical Website'}
+          isHovered={hoveredProject === "Cabinet Medical Website"}
         />
-
 
         {/* Eco-Store */}
         <ProjectCard
@@ -76,9 +90,8 @@ function AllProjects() {
           demoLink="https://onlay-shop.onrender.com/"
           repoLink="https://github.com/RachidHeroumti/Full-stack-Ecomerce-store"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Eco-Store'}
+          isHovered={hoveredProject === "Eco-Store"}
         />
-        
 
         {/* Book Shop */}
         <ProjectCard
@@ -88,10 +101,9 @@ function AllProjects() {
           demoLink="https://books-shop-tau.vercel.app/books"
           repoLink="https://github.com/RachidHeroumti/Books"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Book Shop'}
+          isHovered={hoveredProject === "Book Shop"}
         />
 
-     
         {/* Delivery Food */}
         <ProjectCard
           title="DeliveryFood"
@@ -100,7 +112,7 @@ function AllProjects() {
           demoLink="https://deliveryfood-xg3z.onrender.com/"
           repoLink="https://github.com/RachidHeroumti/Delivary-food-client"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'DeliveryFood'}
+          isHovered={hoveredProject === "DeliveryFood"}
         />
 
         {/* Chat App */}
@@ -111,14 +123,23 @@ function AllProjects() {
           demoLink="https://chatapp-lfc6.onrender.com"
           repoLink="https://github.com/RachidHeroumti/ChatApp-client"
           setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === 'Chat App'}
+          isHovered={hoveredProject === "Chat App"}
         />
       </div>
     </div>
   );
 }
 
-const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHoveredProject, isHovered }) => (
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  demoLink,
+  repoLink,
+  setHoveredProject,
+  isHovered,
+  isnew=false
+}) => (
   <div
     className="group relative rounded-2xl overflow-hidden bg-gray-800/30 backdrop-blur-lg border border-gray-700/30 
                transform transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]"
@@ -135,11 +156,11 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHove
       />
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
-      
+
       {/* Floating Tag */}
-      <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/50 rounded-full backdrop-blur-sm">
+     {isnew&& <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/50 rounded-full backdrop-blur-sm">
         Featured
-      </span>
+      </span>}
     </div>
 
     {/* Content Section */}
@@ -147,14 +168,18 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHove
       <h1 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
         {title}
       </h1>
-      <p className="text-gray-300 text-sm leading-relaxed mb-5 opacity-0 group-hover:opacity-100 
-                   transform translate-y-3 group-hover:translate-y-0 transition-all duration-500">
+      <p
+        className="text-gray-300 text-sm leading-relaxed mb-5 opacity-0 group-hover:opacity-100 
+                   transform translate-y-3 group-hover:translate-y-0 transition-all duration-500"
+      >
         {description}
       </p>
 
       {/* Buttons */}
-      <div className="flex gap-4 justify-center items-center opacity-0 group-hover:opacity-100 
-                     transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 delay-100">
+      <div
+        className="flex gap-4 justify-center items-center opacity-0 group-hover:opacity-100 
+                     transform translate-y-6 group-hover:translate-y-0 transition-all duration-500 delay-100"
+      >
         <a
           href={demoLink}
           target="_blank"
@@ -163,8 +188,18 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHove
                     hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
         >
           <span>Explore</span>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+          <svg
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </a>
         <a
@@ -180,8 +215,10 @@ const ProjectCard = ({ title, description, imageUrl, demoLink, repoLink, setHove
     </div>
 
     {/* Animated Border Effect */}
-    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 
-                   opacity-0 group-hover:opacity-20 transition-opacity duration-700 -z-10 blur-2xl" />
+    <div
+      className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 
+                   opacity-0 group-hover:opacity-20 transition-opacity duration-700 -z-10 blur-2xl"
+    />
   </div>
 );
 
