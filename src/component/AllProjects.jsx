@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import dashboardPicture from "../image/dasboard.png";
+import dashboardPicture from "../image/dashboard2.png";
 import cosaPic from "../image/cosaluxePic.png";
 function AllProjects() {
   const [hoveredProject, setHoveredProject] = useState(null);
