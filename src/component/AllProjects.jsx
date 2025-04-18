@@ -26,7 +26,7 @@ function AllProjects() {
         </p>
       </div>
 
-      {/* Projects Grid */}
+      {/* Projects  */}
       <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-6">
         <ProjectCard
           title="Atlas"
