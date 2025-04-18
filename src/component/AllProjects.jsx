@@ -28,18 +28,6 @@ function AllProjects() {
 
       {/* Projects Grid */}
       <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-6">
-        {/* CosaLuxe */}
-        <ProjectCard
-          title="Website for cosaluxe "
-          description="A dynamic and robust website designed for the CosaLuxe brand to showcase and sell their products, featuring multilingual support and an elegant, user-friendly design."
-          imageUrl={cosaPic}
-          demoLink="https://www.cosaluxe.ma"
-          repoLink="https://github.com/RachidHeroumti"
-          setHoveredProject={setHoveredProject}
-          isHovered={hoveredProject === "cosaluxe"}
-          isnew={true}
-        />
-
         <ProjectCard
           title="Atlas"
           description="A stunning Vue.js-powered theme for Storeino, delivering lightning-fast search, dynamic filters, immersive product pages, and a sleek cart—crafted for global reach with multi-language and currency support."
@@ -49,6 +37,7 @@ function AllProjects() {
           setHoveredProject={setHoveredProject}
           isHovered={hoveredProject === "Atlas"}
         />
+
         {/* Dashboard */}
         <ProjectCard
           title="Dashboard Admin"
@@ -60,7 +49,17 @@ function AllProjects() {
           isHovered={hoveredProject === "Dashboard Admin"}
           isnew={true}
         />
-
+        {/* CosaLuxe */}
+        <ProjectCard
+          title="Website for cosaluxe "
+          description="A dynamic and robust website designed for the CosaLuxe brand to showcase and sell their products, featuring multilingual support and an elegant, user-friendly design."
+          imageUrl={cosaPic}
+          demoLink="https://www.cosaluxe.ma"
+          repoLink="https://github.com/RachidHeroumti"
+          setHoveredProject={setHoveredProject}
+          isHovered={hoveredProject === "cosaluxe"}
+          isnew={true}
+        />
         {/* Prestige */}
         <ProjectCard
           title="Prestige"
@@ -138,7 +137,7 @@ const ProjectCard = ({
   repoLink,
   setHoveredProject,
   isHovered,
-  isnew=false
+  isnew = false,
 }) => (
   <div
     className="group relative rounded-2xl overflow-hidden bg-gray-800/30 backdrop-blur-lg border border-gray-700/30 
@@ -158,9 +157,11 @@ const ProjectCard = ({
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
 
       {/* Floating Tag */}
-     {isnew&& <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/50 rounded-full backdrop-blur-sm">
-        Featured
-      </span>}
+      {isnew && (
+        <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/50 rounded-full backdrop-blur-sm">
+          Featured
+        </span>
+      )}
     </div>
 
     {/* Content Section */}
