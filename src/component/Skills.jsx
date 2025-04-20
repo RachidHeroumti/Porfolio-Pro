@@ -13,21 +13,20 @@ function Skills() {
       title: 'Frontend Mastery',
       icon: <BiCodeBlock size={60} className="text-cyan-400" />,
       items: [
-        { name: 'HTML & CSS', level: 90, desc: 'Pixel-perfect, responsive designs', icon: <SiHtml5 className="text-orange-500" /> },
-        { name: 'Tailwind & Bootstrap', level: 85, desc: 'Rapid, stylish UI development', icon: <SiTailwindcss className="text-cyan-500" /> },
+        { name: 'HTML & CSS', level: 60, desc: 'Pixel-perfect, responsive designs', icon: <SiHtml5 className="text-orange-500" /> },
+        { name: 'Tailwind & Bootstrap', level: 70, desc: 'Rapid, stylish UI development', icon: <SiTailwindcss className="text-cyan-500" /> },
         { name: 'JavaScript & TypeScript', level: 80, desc: 'Dynamic, type-safe interactivity', icon: <SiJavascript className="text-yellow-400" /> },
         { name: 'React.js', level: 75, desc: 'Scalable, modern SPAs', icon: <SiReact className="text-cyan-400" /> },
-        { name: 'Next.js', level: 70, desc: 'Server-rendered, SEO-optimized apps', icon: <SiNextdotjs className="text-white" /> }
+        { name: 'Next.js', level: 50, desc: 'Server-rendered, SEO-optimized apps', icon: <SiNextdotjs className="text-white" /> }
       ]
     },
     {
       title: 'Backend Expertise',
       icon: <FaDev size={60} className="text-cyan-400" />,
       items: [
-        { name: 'Node.js & Express', level: 85, desc: 'Robust, high-performance APIs', icon: <SiNodedotjs className="text-green-500" /> },
-        { name: 'Next.js API', level: 70, desc: 'Full-stack power in one framework', icon: <SiNextdotjs className="text-white" /> },
-        { name: 'PHP', level: 40, desc: 'Lightweight server-side scripting', icon: <SiPhp className="text-blue-600" /> },
-        { name: 'Spring Boot', level: 45, desc: 'Enterprise-grade Java solutions', icon: <SiSpring className="text-green-600" /> }
+        { name: 'Node.js & Express', level: 70, desc: 'Robust, high-performance APIs', icon: <SiNodedotjs className="text-green-500" /> },
+        { name: 'Laravel/php', level: 40, desc: 'Lightweight server-side scripting', icon: <SiPhp className="text-blue-600" /> },
+        { name: 'Spring Boot', level: 35, desc: 'Enterprise-grade Java solutions', icon: <SiSpring className="text-green-600" /> }
        
       ]
     },
@@ -35,9 +34,9 @@ function Skills() {
       title: 'Database Wizardry',
       icon: <TbDatabaseStar size={60} className="text-cyan-400" />,
       items: [
-        { name: 'MongoDB', level: 80, desc: 'Flexible NoSQL architecture', icon: <SiMongodb className="text-green-500" /> },
+        { name: 'MongoDB', level: 60, desc: 'Flexible NoSQL architecture', icon: <SiMongodb className="text-green-500" /> },
         { name: 'Firebase', level: 60, desc: 'Real-time, cloud-powered data', icon: <SiFirebase className="text-yellow-500" /> },
-        { name: 'SQL & MySQL', level: 35, desc: 'Structured data mastery', icon: <SiMysql className="text-blue-600" /> },
+        { name: 'SQL & MySQL', level: 40, desc: 'Structured data mastery', icon: <SiMysql className="text-blue-600" /> },
         { name: 'Oracle DB', level: 40, desc: 'Enterprise database solutions', icon: <SiOracle className="text-red-600" /> },
       
       ]
@@ -46,11 +45,8 @@ function Skills() {
       title: 'Mobile Development',
       icon: <TbDeviceMobileCode size={60} className="text-cyan-400" />,
       items: [
-      
-        { name: 'Java', level: 60, desc: 'Versatile mobile foundations', icon: <FaJava className="text-red-600" /> }, 
-        { name: 'React Native', level: 45, desc: 'Cross-platform mobile apps', icon: <SiReact className="text-cyan-400" /> },
-        { name: 'Android Studio', level: 30, desc: 'Native Android app creation', icon: <SiAndroidstudio className="text-green-500" /> },
-        { name: 'Kotlin', level: 30, desc: 'Modern, concise mobile coding', icon: <SiKotlin className="text-purple-600" /> },
+        { name: 'React Native', level: 50, desc: 'Cross-platform mobile apps', icon: <SiReact className="text-cyan-400" /> },
+       
       ]
     },
     {
@@ -58,9 +54,7 @@ function Skills() {
       icon: <BiCodeBlock size={60} className="text-cyan-400" />,
       items: [
         { name: 'Git & GitHub', level: 55, desc: 'Version control & collaboration', icon: <SiGit className="text-orange-600" /> },
-        { name: 'Docker', level: 50, desc: 'Containerized deployments', icon: <SiDocker className="text-blue-500" /> },
-        { name: 'Figma', level: 40, desc: 'UI/UX design prototyping', icon: <SiFigma className="text-purple-500" /> },
-        { name: 'CI/CD & DevOps', level: 30, desc: 'Automation in progress', icon: <SiReactrouter className="text-red-500" /> }
+        { name: 'Docker', level: 40, desc: 'Containerized deployments', icon: <SiDocker className="text-blue-500" /> },
       ]
     }
   ];
