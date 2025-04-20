@@ -16,7 +16,7 @@ function Skills() {
         { name: 'HTML & CSS', level: 60, desc: 'Pixel-perfect, responsive designs', icon: <SiHtml5 className="text-orange-500" /> },
         { name: 'Tailwind & Bootstrap', level: 70, desc: 'Rapid, stylish UI development', icon: <SiTailwindcss className="text-cyan-500" /> },
         { name: 'JavaScript & TypeScript', level: 80, desc: 'Dynamic, type-safe interactivity', icon: <SiJavascript className="text-yellow-400" /> },
-        { name: 'React.js', level: 75, desc: 'Scalable, modern SPAs', icon: <SiReact className="text-cyan-400" /> },
+        { name: 'React.js/Vue js', level: 75, desc: 'Scalable, modern SPAs', icon: <SiReact className="text-cyan-400" /> },
         { name: 'Next.js', level: 50, desc: 'Server-rendered, SEO-optimized apps', icon: <SiNextdotjs className="text-white" /> }
       ]
     },
