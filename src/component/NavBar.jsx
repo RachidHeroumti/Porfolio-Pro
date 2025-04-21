@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AiFillInstagram, AiFillGithub, AiFillFacebook, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { FiDownload } from 'react-icons/fi';
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,14 @@ function NavBar() {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#contact">Contact</NavLink>
+          <a
+            href="/assets/ResumeHero.pdf"
+            download="Rachid_Heroumti_Resume.pdf"
+            className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <span>Resume</span>
+            <FiDownload size={18} />
+          </a>
         </div>
 
         <div className="hidden md:flex items-center gap-5">
@@ -84,6 +93,14 @@ function NavBar() {
           <NavLink href="#contact" onClick={toggleMenu}>
             Contact
           </NavLink>
+          <a
+            href="/assets/ResumeHero.pdf"
+            download="Rachid_Heroumti_Resume.pdf"
+            className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            <span>Resume</span>
+            <FiDownload size={18} />
+          </a>
           <div className="flex gap-6 mt-4">
             <a
               href="https://instagram.com"

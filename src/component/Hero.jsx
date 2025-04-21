@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import imgP from '../image/img1.png';
-import { FiDownload } from 'react-icons/fi';
+import { RiTodoLine } from "react-icons/ri";
 import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 
 function Hero() {
@@ -52,7 +52,7 @@ function Hero() {
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
             A passionate <span className="font-bold text-cyan-400">Full Stack Developer</span> 🚀<br />
-            I craft powerful applications with <span className="text-cyan-400">JavaScript, Java, React, Node.js, Spring Boot, Next.js, and SQL</span>,
+            I craft powerful applications with <span className="text-cyan-400">JavaScript, React/vue, Node.js, Laravel/php, Next.js, and SQL</span>,
             blending creativity with cutting-edge tech.
           </p>
 
@@ -101,14 +101,14 @@ function Hero() {
           </div>
 
           {/* Resume Button */}
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start gap-5">
+          
             <a
-              href="/assets/ResumeHero.pdf"
-              download="Rachid_Heroumti_Resume.pdf"
+              href="#projects"
               className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
             >
-              <span>Download Resume</span>
-              <FiDownload size={18} />
+              <RiTodoLine size={20} />
+              <span>Projects</span>
             </a>
           </div>
         </div>
