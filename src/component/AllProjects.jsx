@@ -1,203 +1,166 @@
-import React, { useState } from "react";
-import dashboardPicture from "../image/dashboard2.png";
-import cosaPic from "../image/cosaluxePic.png";
+import React, { useState, useCallback, memo } from "react";
+import { projects } from "../utils/data/Projects";
 
-function AllProjects() {
-  const [hoveredProject, setHoveredProject] = useState(null);
 
-  return (
-    <div
-      className="w-full min-h-screen flex flex-col items-center py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 mt-10"
-      id="projects"
-    >
-      {/* Header Section */}
-      <div className="relative mb-20 text-center">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
-          My{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-              Projects
-            </span>
-          </span>
-        </h1>
-        <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-          Explore my handcrafted creations—where innovation meets seamless
-          functionality.
-        </p>
-      </div>
-
-      {/* Projects  */}
-      <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-6">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            {...project}
-            setHoveredProject={setHoveredProject}
-            isHovered={hoveredProject === project.title}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-const projects = [
-  {
-    title: "Prestige",
-    description:
-      "An elegant Vue.js theme for Storeino, blending intuitive search, refined filters, and captivating product displays with a smooth cart experience—designed for worldwide appeal with multi-language and currency features.",
-    imageUrl: "https://storeno.b-cdn.net/stores/11-2024/1731335307001.png",
-    demoLink: "https://prestige-theme.storeino.com/",
-    repoLink: "https://github.com/RachidHeroumti",
-  },
-  {
-    title: "Dashboard Admin",
-    description:
-      "A powerful admin dashboard built with React.js and Tailwind CSS, integrated with an Express.js and MongoDB backend. Features include real-time data visualization, user management, and responsive design for seamless business operations.",
-    imageUrl: dashboardPicture,
-    demoLink: "https://ecommerce-dashboard-fawn-six.vercel.app",
-    repoLink: "https://github.com/RachidHeroumti",
-    isnew: true,
-  },
-  {
-    title: "Cabinet Medical",
-    description:
-      "A cutting-edge medical platform crafted with React.js, Tailwind CSS, Node.js, and MongoDB—streamlining patient care with a clean, professional interface and robust backend.",
-    imageUrl:
-      "https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600",
-    demoLink: "https://cabinet-medical-pfe.onrender.com/",
-    repoLink: "https://github.com/RachidHeroumti/Cabinet-Medical-PFE-",
-  },
-  {
-    title: "Website for cosaluxe ",
-    description:
-      "A dynamic and robust website designed for the CosaLuxe brand to showcase and sell their products, featuring multilingual support and an elegant, user-friendly design.",
-    imageUrl: cosaPic,
-    demoLink: "https://www.cosaluxe.ma",
-    repoLink: "https://github.com/RachidHeroumti",
-    isnew: true,
-  },
-
-  {
-    title: "Atlas",
-    description:
-      "A stunning Vue.js-powered theme for Storeino, delivering lightning-fast search, dynamic filters, immersive product pages, and a sleek cart—crafted for global reach with multi-language and currency support.",
-    imageUrl: "https://storeino-files.b-cdn.net/themes/atlas.png",
-    demoLink: "https://atlas-theme.storeino.com/",
-    repoLink: "https://github.com/RachidHeroumti",
-  },
-
-  {
-    title: "Eco-Store",
-    description:
-      "A robust e-commerce powerhouse built with React.js, Node.js, Express.js, and MongoDB—offering real-time inventory sync and a buttery-smooth shopping journey from browse to checkout.",
-    imageUrl:
-      "https://refillgoodness.com/cdn/shop/files/Curbside_2_0892fc30-595c-485a-86e4-a87e8b5c30bd_1600x.png?v=1637630374",
-    demoLink: "https://onlay-shop.onrender.com/",
-    repoLink: "https://github.com/RachidHeroumti/Full-stack-Ecomerce-store",
-  },
-  {
-    title: "Book Shop",
-    description:
-      "A sleek online bookstore powered by Next.js and Tailwind CSS, showcasing a vast genre collection with effortless navigation and a modern, responsive design that book lovers adore.",
-    imageUrl:
-      "https://images.pexels.com/photos/4318455/pexels-photo-4318455.jpeg?auto=compress&cs=tinysrgb&w=600",
-    demoLink: "https://books-shop-tau.vercel.app/books",
-    repoLink: "https://github.com/RachidHeroumti/Books",
-  },
-  {
-    title: "DeliveryFood",
-    description:
-      "A vibrant React.js and Tailwind CSS food delivery frontend, engineered for speed and simplicity—making online ordering a delight with its intuitive design.",
-    imageUrl:
-      "https://images.pexels.com/photos/4392036/pexels-photo-4392036.jpeg?auto=compress&cs=tinysrgb&w=300",
-    demoLink: "https://deliveryfood-xg3z.onrender.com/",
-    repoLink: "https://github.com/RachidHeroumti/Delivary-food-client",
-  },
-  {
-    title: "Chat App",
-    description:
-      "A dynamic real-time chat experience built with React.js and Socket.io—featuring instant messaging, secure authentication, and multi-room functionality for effortless communication.",
-    imageUrl: "./chat_icon.png",
-    demoLink: "https://chatapp-lfc6.onrender.com",
-    repoLink: "https://github.com/RachidHeroumti/ChatApp-client",
-  },
-];
-
-const ProjectCard = ({
+const ProjectCard = memo(({
   title,
   description,
   imageUrl,
   demoLink,
   repoLink,
-  setHoveredProject,
   isHovered,
-  isnew = false,
-}) => (
-  <div
-    className="group relative rounded-2xl overflow-hidden bg-gray-800/30 backdrop-blur-lg border border-gray-700/30 transform transition-all duration-700 hover:-translate-y-3 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]"
-    onMouseEnter={() => setHoveredProject(title)}
-    onMouseLeave={() => setHoveredProject(null)}
-  >
-    {/* Image Section */}
-    <div className="relative h-72 overflow-hidden">
-      <img
-        className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 group-hover:brightness-110"
-        src={imageUrl}
-        alt={`${title}-preview`}
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
-      {isnew && (
-        <span className="absolute top-4 right-4 px-3 py-1 text-xs font-medium text-cyan-300 bg-cyan-900/50 rounded-full backdrop-blur-sm">
-          Featured
-        </span>
-      )}
-    </div>
-
-    {/* Content Section */}
-    <div className="p-6 relative z-10">
-      <h1 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
-        {title}
-      </h1>
-      <p className="text-gray-300 text-sm leading-relaxed mb-5 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-3 md:group-hover:translate-y-0 transition-all duration-500">
-        {description}
-      </p>
-      <div className="flex gap-4 justify-center items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-6 md:group-hover:translate-y-0 transition-all duration-500 delay-100">
-        <a
-          href={demoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-        >
-          <span>Explore</span>
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
-        </a>
-        <a
-          href={repoLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-5 py-2 border border-cyan-400/50 text-cyan-400 rounded-full font-medium hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 transform hover:scale-105"
-        >
-          Source
-        </a>
+  onHover,
+  onLeave,
+  isFeatured = false,
+}) => {
+  return (
+    <article
+      className="group relative rounded-3xl overflow-hidden bg-gray-800/40 backdrop-blur-xl border border-gray-600/20 transform transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(59,130,246,0.15)] focus-within:ring-2 focus-within:ring-cyan-400/50"
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
+      role="article"
+      aria-labelledby={`project-${title.replace(/\s+/g, '-').toLowerCase()}`}
+    >
+      {/* Enhanced Image Section */}
+      <div className="relative h-60 overflow-hidden">
+        <img
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-125"
+          src={imageUrl}
+          alt={`${title} project preview`}
+          loading="lazy"
+          decoding="async"
+        />
+        
+        {/* Improved gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+        
+        {/* Enhanced status badge */}
+        {isFeatured && (
+          <div className="absolute top-4 right-4 px-3 py-1.5 text-xs font-semibold text-cyan-100 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full backdrop-blur-md shadow-lg animate-pulse">
+            ✨ Featured
+          </div>
+        )}
+        
+        {/* Hover overlay effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/5 group-hover:to-purple-500/10 transition-all duration-700" />
       </div>
-    </div>
 
-    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-700 -z-10 blur-2xl" />
-  </div>
-);
+      {/* Enhanced Content Section */}
+      <div className="p-7 relative z-10 space-y-4">
+        <h2 
+          id={`project-${title.replace(/\s+/g, '-').toLowerCase()}`}
+          className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-400 leading-tight"
+        >
+          {title}
+        </h2>
+        
+        <p className="text-gray-300 text-sm leading-relaxed line-clamp-3 group-hover:text-gray-200 transition-colors duration-300">
+          {description}
+        </p>
+        
+        {/* Improved button section */}
+        <div className="flex gap-3 pt-4">
+          <a
+            href={demoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-cyan-400/50 active:scale-[0.98]"
+            aria-label={`View live demo of ${title}`}
+          >
+            <span>Live Demo</span>
+            <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          
+          <a
+            href={repoLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-cyan-400/40 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-400/10 hover:border-cyan-400/60 hover:text-cyan-300 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-400/50 active:scale-[0.98]"
+            aria-label={`View source code for ${title}`}
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span className="hidden sm:inline">Code</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Enhanced glow effect */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700 -z-10 blur-xl" />
+    </article>
+  );
+});
+
+ProjectCard.displayName = 'ProjectCard';
+
+function AllProjects() {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
+  // Memoized handlers for better performance
+  const handleProjectHover = useCallback((projectTitle) => {
+    setHoveredProject(projectTitle);
+  }, []);
+
+  const handleProjectLeave = useCallback(() => {
+    setHoveredProject(null);
+  }, []);
+
+  return (
+    <section
+      className="w-full min-h-screen flex flex-col items-center py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800"
+      id="projects"
+      aria-label="My Projects"
+    >
+      {/* Enhanced Header Section */}
+      <header className="relative mb-16 text-center max-w-4xl mx-auto px-6">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tight leading-none">
+          My{" "}
+          <span className="relative inline-block">
+            <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
+              Projects
+            </span>
+            {/* Subtle glow effect */}
+            <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 blur-sm opacity-50">
+              Projects
+            </span>
+          </span>
+        </h1>
+        
+        <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Discover my portfolio of innovative solutions—where cutting-edge technology meets exceptional user experience.
+        </p>
+        
+        {/* Decorative line */}
+        <div className="mt-8 w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-600 mx-auto rounded-full" />
+      </header>
+
+      {/* Enhanced Projects Grid */}
+      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 max-w-7xl mx-auto px-6 w-full">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            description={project.description}
+            imageUrl={project.imageUrl}
+            demoLink={project.demoLink}
+            repoLink={project.repoLink}
+            isFeatured={project.isnew}
+            isHovered={hoveredProject === project.title}
+            onHover={() => handleProjectHover(project.title)}
+            onLeave={handleProjectLeave}
+          />
+        ))}
+      </div>
+
+      {/* Optional: Add a subtle background pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+      </div>
+    </section>
+  );
+}
 
 export default AllProjects;
