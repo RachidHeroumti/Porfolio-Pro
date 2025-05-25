@@ -28,7 +28,7 @@ function NavBar() {
           <NavLink href="#about">About</NavLink>
           <NavLink href="#contact">Contact</NavLink>
           <a
-            href="/assets/cv.pdf"
+            href="/assets/Rachid_Heroumti_ATS_Resume.pdf"
             download="Rachid_Heroumti_Resume.pdf"
             className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >
@@ -94,7 +94,7 @@ function NavBar() {
             Contact
           </NavLink>
           <a
-            href="/assets/cv.pdf"
+            href="/assets/Rachid_Heroumti_ATS_Resume.pdf"
             download="Rachid_Heroumti_Resume.pdf"
             className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
           >

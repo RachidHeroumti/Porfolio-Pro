@@ -52,7 +52,7 @@ function Hero() {
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
             A passionate <span className="font-bold text-cyan-400">Full Stack Developer</span> 🚀<br />
-            I craft powerful applications with <span className="text-cyan-400">JavaScript, React/vue, Node.js, Laravel/php, Next.js, and SQL</span>,
+            I craft powerful applications with <span className="text-cyan-400">JavaScript, React/vue, Node.js, Laravel/php, Next.js, and SQL/MongoDB</span>,
             blending creativity with cutting-edge tech.
           </p>
 

@@ -1,11 +1,56 @@
 import React from 'react';
 import { BiCodeBlock } from "react-icons/bi";
 import { TbDatabaseStar, TbDeviceMobileCode } from "react-icons/tb";
-import { FaDev, FaJava } from "react-icons/fa"; // Added FaJava for Java
+import { FaDev, FaJava } from "react-icons/fa";
 import { SiHtml5, SiCss3, SiTailwindcss, SiJavascript, SiTypescript, SiReact, SiNextdotjs, 
          SiNodedotjs, SiExpress, SiPhp, SiSpring, SiMysql, SiOracle, SiMongodb, SiFirebase, 
          SiAndroidstudio, SiKotlin, SiGit, SiDocker, SiFigma, SiReactrouter } from "react-icons/si";
-import ProgressBar from '@ramonak/react-progress-bar';
+
+// Circular Progress Component
+const CircularProgress = ({ percentage, size = 80 }) => {
+  const radius = (size - 8) / 2;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div className="relative" style={{ width: size, height: size }}>
+      <svg
+        className="transform -rotate-90"
+        width={size}
+        height={size}
+      >
+        {/* Background circle */}
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          stroke="#1e293b"
+          strokeWidth="4"
+          fill="transparent"
+        />
+        {/* Progress circle */}
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          stroke="url(#gradient)"
+          strokeWidth="4"
+          fill="transparent"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          className="transition-all duration-1000 ease-out"
+        />
+      </svg>
+      {/* Percentage text */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-sm font-semibold text-cyan-400">
+          {percentage}%
+        </span>
+      </div>
+    </div>
+  );
+};
 
 function Skills() {
   const skills = [
@@ -13,11 +58,9 @@ function Skills() {
       title: 'Frontend Mastery',
       icon: <BiCodeBlock size={60} className="text-cyan-400" />,
       items: [
-        { name: 'HTML & CSS', level: 60, desc: 'Pixel-perfect, responsive designs', icon: <SiHtml5 className="text-orange-500" /> },
-        { name: 'Tailwind & Bootstrap', level: 70, desc: 'Rapid, stylish UI development', icon: <SiTailwindcss className="text-cyan-500" /> },
+        { name: 'HTML & CSS /Tailwind & Bootstrap', level: 60, desc: 'Pixel-perfect, responsive designs', icon: <SiHtml5 className="text-orange-500" /> },
         { name: 'JavaScript & TypeScript', level: 80, desc: 'Dynamic, type-safe interactivity', icon: <SiJavascript className="text-yellow-400" /> },
-        { name: 'React.js/Vue js', level: 75, desc: 'Scalable, modern SPAs', icon: <SiReact className="text-cyan-400" /> },
-        { name: 'Next.js', level: 50, desc: 'Server-rendered, SEO-optimized apps', icon: <SiNextdotjs className="text-white" /> }
+        { name: 'React.js/Vue js & Next.js', level: 75, desc: 'Scalable, modern SPAs /Server-rendered, SEO-optimized apps', icon: <SiReact className="text-cyan-400" /> },
       ]
     },
     {
@@ -26,8 +69,6 @@ function Skills() {
       items: [
         { name: 'Node.js & Express', level: 70, desc: 'Robust, high-performance APIs', icon: <SiNodedotjs className="text-green-500" /> },
         { name: 'Laravel/php', level: 40, desc: 'Lightweight server-side scripting', icon: <SiPhp className="text-blue-600" /> },
-        { name: 'Spring Boot', level: 35, desc: 'Enterprise-grade Java solutions', icon: <SiSpring className="text-green-600" /> }
-       
       ]
     },
     {
@@ -35,10 +76,8 @@ function Skills() {
       icon: <TbDatabaseStar size={60} className="text-cyan-400" />,
       items: [
         { name: 'MongoDB', level: 60, desc: 'Flexible NoSQL architecture', icon: <SiMongodb className="text-green-500" /> },
-        { name: 'Firebase', level: 60, desc: 'Real-time, cloud-powered data', icon: <SiFirebase className="text-yellow-500" /> },
         { name: 'SQL & MySQL', level: 40, desc: 'Structured data mastery', icon: <SiMysql className="text-blue-600" /> },
-        { name: 'Oracle DB', level: 40, desc: 'Enterprise database solutions', icon: <SiOracle className="text-red-600" /> },
-      
+        { name: 'Firebase', level: 60, desc: 'Real-time, cloud-powered data', icon: <SiFirebase className="text-yellow-500" /> },
       ]
     },
     {
@@ -46,7 +85,6 @@ function Skills() {
       icon: <TbDeviceMobileCode size={60} className="text-cyan-400" />,
       items: [
         { name: 'React Native', level: 50, desc: 'Cross-platform mobile apps', icon: <SiReact className="text-cyan-400" /> },
-       
       ]
     },
     {
@@ -91,38 +129,33 @@ function Skills() {
             </div>
 
             {/* Content */}
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-6">
               <h2 className="text-2xl font-semibold text-white text-center group-hover:text-cyan-300 transition-colors duration-300">
                 {skill.title}
               </h2>
               {skill.items.map((item, i) => (
-                <div key={i} className="space-y-2 group/item">
-                  <div className="flex items-center gap-3">
-                    <span className="text-xl">{item.icon}</span>
-                    <div className="flex-1">
-                      <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-300 group-hover/item:text-cyan-400 transition-colors duration-300">
+                <div key={i} className="group/item">
+                  <div className="flex items-center gap-4">
+                    <span className="text-xl flex-shrink-0">{item.icon}</span>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-gray-300 group-hover/item:text-cyan-400 transition-colors duration-300 text-sm font-medium">
                           {item.name}
                         </span>
-                        <span className="text-cyan-400 font-medium">{item.level}%</span>
                       </div>
-                      <ProgressBar
-                        completed={item.level}
-                        bgColor="url(#gradient)"
-                        baseBgColor="#1e293b"
-                        height="6px"
-                        labelAlignment="outside"
-                        labelColor="transparent"
-                        customLabel=" "
-                      />
-                      <p className="text-xs text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300">
+                      <p className="text-xs text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 mb-3">
                         {item.desc}
                       </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <CircularProgress percentage={item.level} size={70} />
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+            
+            {/* SVG Gradient Definition */}
             <svg className="absolute -z-10" width="0" height="0">
               <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -43,7 +43,7 @@ function Services() {
               Frontend Development
             </h2>
             <p className="mt-2 text-gray-300 text-sm leading-relaxed">
-              Crafting sleek, responsive interfaces with <span className="text-cyan-400">HTML, CSS, React.js, Next.js, Tailwind, and Bootstrap</span>. 
+              Crafting sleek, responsive interfaces with <span className="text-cyan-400">HTML, CSS, React.js, Next.js, Tailwind/bootstrap, and Bootstrap</span>. 
               I prioritize seamless user experiences that look stunning on any device.
             </p>
           </div>
@@ -55,7 +55,7 @@ function Services() {
               Backend Development
             </h2>
             <p className="mt-2 text-gray-300 text-sm leading-relaxed">
-              Building robust APIs and managing data with <span className="text-cyan-400">Node.js, Express.js, MongoDB, SQL, and Firebase</span>. 
+              Building robust APIs and managing data with <span className="text-cyan-400">Node.js/Express.js,Laravel/php, MongoDB,MySQL, and Firebase</span>. 
               I ensure efficiency and scalability behind the scenes.
             </p>
           </div>
@@ -67,20 +67,20 @@ function Services() {
               Programming Languages
             </h2>
             <p className="mt-2 text-gray-300 text-sm leading-relaxed">
-              Coding versatile solutions using <span className="text-cyan-400">JavaScript, TypeScript, Java, C, C++, PHP, and Kotlin</span>. 
+              Coding versatile solutions using <span className="text-cyan-400">JavaScript, TypeScript, Java, C, C++,and PHP</span>. 
               I leverage each language’s strengths for optimal results.
             </p>
           </div>
 
-          {/* Android Development */}
+          {/* mobile Development */}
           <div className="group bg-gray-800/30 backdrop-blur-lg rounded-2xl p-6 border border-gray-700/30 
                          transform transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)]">
             <h2 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">
-              Android Development
+              Mobile Development
             </h2>
             <p className="mt-2 text-gray-300 text-sm leading-relaxed">
-              Creating high-performance mobile apps with <span className="text-cyan-400">Java and Kotlin</span>. 
-              I focus on delivering intuitive, user-friendly Android experiences.
+              Creating high-performance mobile apps with <span className="text-cyan-400">React native</span>. 
+              I focus on delivering intuitive, user-friendly mobile experiences.
             </p>
           </div>
         </div>

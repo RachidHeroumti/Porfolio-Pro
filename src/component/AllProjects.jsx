@@ -13,7 +13,7 @@ function AllProjects() {
       {/* Header Section */}
       <div className="relative mb-20 text-center">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight">
-          My {" "}
+          My{" "}
           <span className="relative inline-block">
             <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
               Projects
@@ -43,11 +43,11 @@ function AllProjects() {
 
 const projects = [
   {
-    title: "Atlas",
+    title: "Prestige",
     description:
-      "A stunning Vue.js-powered theme for Storeino, delivering lightning-fast search, dynamic filters, immersive product pages, and a sleek cart—crafted for global reach with multi-language and currency support.",
-    imageUrl: "https://storeino-files.b-cdn.net/themes/atlas.png",
-    demoLink: "https://atlas-theme.storeino.com/",
+      "An elegant Vue.js theme for Storeino, blending intuitive search, refined filters, and captivating product displays with a smooth cart experience—designed for worldwide appeal with multi-language and currency features.",
+    imageUrl: "https://storeno.b-cdn.net/stores/11-2024/1731335307001.png",
+    demoLink: "https://prestige-theme.storeino.com/",
     repoLink: "https://github.com/RachidHeroumti",
   },
   {
@@ -60,6 +60,15 @@ const projects = [
     isnew: true,
   },
   {
+    title: "Cabinet Medical",
+    description:
+      "A cutting-edge medical platform crafted with React.js, Tailwind CSS, Node.js, and MongoDB—streamlining patient care with a clean, professional interface and robust backend.",
+    imageUrl:
+      "https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600",
+    demoLink: "https://cabinet-medical-pfe.onrender.com/",
+    repoLink: "https://github.com/RachidHeroumti/Cabinet-Medical-PFE-",
+  },
+  {
     title: "Website for cosaluxe ",
     description:
       "A dynamic and robust website designed for the CosaLuxe brand to showcase and sell their products, featuring multilingual support and an elegant, user-friendly design.",
@@ -68,22 +77,16 @@ const projects = [
     repoLink: "https://github.com/RachidHeroumti",
     isnew: true,
   },
+
   {
-    title: "Prestige",
+    title: "Atlas",
     description:
-      "An elegant Vue.js theme for Storeino, blending intuitive search, refined filters, and captivating product displays with a smooth cart experience—designed for worldwide appeal with multi-language and currency features.",
-    imageUrl: "https://storeno.b-cdn.net/stores/11-2024/1731335307001.png",
-    demoLink: "https://prestige-theme.storeino.com/",
+      "A stunning Vue.js-powered theme for Storeino, delivering lightning-fast search, dynamic filters, immersive product pages, and a sleek cart—crafted for global reach with multi-language and currency support.",
+    imageUrl: "https://storeino-files.b-cdn.net/themes/atlas.png",
+    demoLink: "https://atlas-theme.storeino.com/",
     repoLink: "https://github.com/RachidHeroumti",
   },
-  {
-    title: "Cabinet Medical",
-    description:
-      "A cutting-edge medical platform crafted with React.js, Tailwind CSS, Node.js, and MongoDB—streamlining patient care with a clean, professional interface and robust backend.",
-    imageUrl: "https://images.pexels.com/photos/8376239/pexels-photo-8376239.jpeg?auto=compress&cs=tinysrgb&w=600",
-    demoLink: "https://cabinet-medical-pfe.onrender.com/",
-    repoLink: "https://github.com/RachidHeroumti/Cabinet-Medical-PFE-",
-  },
+
   {
     title: "Eco-Store",
     description:
@@ -157,14 +160,10 @@ const ProjectCard = ({
       <h1 className="text-2xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
         {title}
       </h1>
-      <p
-        className="text-gray-300 text-sm leading-relaxed mb-5 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-3 md:group-hover:translate-y-0 transition-all duration-500"
-      >
+      <p className="text-gray-300 text-sm leading-relaxed mb-5 opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-3 md:group-hover:translate-y-0 transition-all duration-500">
         {description}
       </p>
-      <div
-        className="flex gap-4 justify-center items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-6 md:group-hover:translate-y-0 transition-all duration-500 delay-100"
-      >
+      <div className="flex gap-4 justify-center items-center opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-6 md:group-hover:translate-y-0 transition-all duration-500 delay-100">
         <a
           href={demoLink}
           target="_blank"
