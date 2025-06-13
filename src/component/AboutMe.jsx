@@ -3,7 +3,7 @@ import React from 'react';
 function AboutMe() {
   return (
     <div 
-      className="w-full py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 text-white font-poppins text-[15px]" 
+      className="w-full py-20  text-white font-poppins text-[15px]" 
       id="about"
     >
       <div className="max-w-7xl mx-auto px-6">

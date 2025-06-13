@@ -1,158 +1,172 @@
 import React, { useState } from 'react';
-import { AiFillInstagram, AiFillGithub, AiFillFacebook, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { FiDownload } from 'react-icons/fi';
+import { 
+  AiOutlineMenu, 
+  AiOutlineClose,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineMail
+} from 'react-icons/ai';
+import { 
+  FiDownload,
+  FiHome,
+  FiUser,
+  FiCode,
+  FiMail
+} from 'react-icons/fi';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { BsFileEarmarkPerson } from 'react-icons/bs';
+
+const NavLink = ({ href, icon: Icon, children, onClick, mobile }) => (
+  <a
+    href={href}
+    onClick={onClick}
+    className={`flex items-center gap-2 group transition-colors duration-300 ${
+      mobile 
+        ? 'text-gray-200 hover:text-white py-3 px-4 rounded-lg hover:bg-gray-800 w-full'
+        : 'text-gray-400 hover:text-cyan-400'
+    }`}
+  >
+    {Icon && <Icon className={mobile ? "text-lg" : "hidden md:inline"} />}
+    <span>{children}</span>
+    {!mobile && (
+      <span className="absolute left-0 bottom-0 w-full h-px bg-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+    )}
+  </a>
+);
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const closeMenu = () => setIsOpen(false);
+
+  const navItems = [
+    { href: "#home", text: "Home", icon: FiHome },
+    { href: "#projects", text: "Projects", icon: FiCode },
+    { href: "#about", text: "About", icon: FiUser },
+    { href: "#contact", text: "Contact", icon: FiMail },
+  ];
+
+  const socialLinks = [
+    { href: "https://linkedin.com", icon: AiFillLinkedin, label: "LinkedIn" },
+    { href: "https://github.com/RachidHeroumti", icon: AiFillGithub, label: "GitHub" },
+    { href: "mailto:rachidheroumti0@gmail.com", icon: AiOutlineMail, label: "Email" },
+    { href: "https://instagram.com", icon: FaInstagram, label: "Instagram" },
+    { href: "https://facebook.com", icon: FaFacebook, label: "Facebook" },
+  ];
 
   return (
     <>
-      <div className="w-full px-6 lg:px-12 text-gray-50 flex justify-between items-center bg-gradient-to-r from-gray-900/90 via-indigo-950/90 to-gray-900/90 backdrop-blur-lg h-20 shadow-[0_4px_20px_rgba(0,0,0,0.5)] fixed top-0 left-0 z-50 font-sans text-[16px] border-b border-cyan-500/20 transition-all duration-300">
+      {/* Desktop Navbar */}
+      <nav className="fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-md border-b border-gray-800 z-50 px-6 lg:px-12 h-20 flex items-center justify-between">
         <div className="flex items-center">
-          <a href="#home" className="group flex items-center">
+          <a href="#home" className="flex items-center group">
             <img
               src="./logo.png"
               alt="Logo"
-              className="w-[120px] md:w-[150px] object-cover transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </a>
         </div>
 
-        <div className="hidden md:flex items-center gap-6 lg:gap-10">
-          <NavLink href="#home">Home</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#contact">Contact</NavLink>
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <div key={item.href} className="relative">
+              <NavLink href={item.href}>
+                {item.text}
+              </NavLink>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:flex items-center space-x-4">
           <a
-            href="/assets/Rachid_Heroumti_ATS_Resume.pdf"
+            href="/resume.pdf"
             download="Rachid_Heroumti_Resume.pdf"
-            className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
           >
+            <BsFileEarmarkPerson />
             <span>Resume</span>
-            <FiDownload size={18} />
+            <FiDownload size={14} />
           </a>
         </div>
 
-        <div className="hidden md:flex items-center gap-5">
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-          >
-            <AiFillInstagram size={24} />
-          </a>
-          <a
-            href="https://github.com/RachidHeroumti"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-          >
-            <AiFillGithub size={24} />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-          >
-            <AiFillFacebook size={24} />
-          </a>
-        </div>
-
-        <button className="md:hidden text-gray-200 hover:text-cyan-300 focus:outline-none" onClick={toggleMenu}>
-          {isOpen ? <AiOutlineClose size={28} /> : <AiOutlineMenu size={28} />}
-        </button>
-      </div>
-
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-gray-900/95 to-indigo-950/95 backdrop-blur-lg shadow-[0_4px_20px_rgba(0,0,0,0.5)] z-50 transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out md:hidden`}
-      >
-        <button
-          className="absolute top-4 right-4 text-gray-200 hover:text-cyan-300 focus:outline-none"
+        <button 
+          className="md:hidden text-gray-300 hover:text-white transition-colors"
           onClick={toggleMenu}
+          aria-label="Toggle menu"
         >
-          <AiOutlineClose size={32} className="drop-shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
+          {isOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </button>
-        <div className="flex flex-col items-center pt-16 gap-6 text-gray-200">
-          <NavLink href="#home" onClick={toggleMenu}>
-            Home
-          </NavLink>
-          <NavLink href="#projects" onClick={toggleMenu}>
-            Projects
-          </NavLink>
-          <NavLink href="#about" onClick={toggleMenu}>
-            About
-          </NavLink>
-          <NavLink href="#contact" onClick={toggleMenu}>
-            Contact
-          </NavLink>
-          <a
-            href="/assets/Rachid_Heroumti_ATS_Resume.pdf"
-            download="Rachid_Heroumti_Resume.pdf"
-            className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-          >
-            <span>Resume</span>
-            <FiDownload size={18} />
-          </a>
-          <div className="flex gap-6 mt-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-              onClick={toggleMenu}
-            >
-              <AiFillInstagram size={24} />
-            </a>
-            <a
-              href="https://github.com/RachidHeroumti"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-              onClick={toggleMenu}
-            >
-              <AiFillGithub size={24} />
-            </a>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110"
-              onClick={toggleMenu}
-            >
-              <AiFillFacebook size={24} />
-            </a>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 z-40 transform transition-all duration-300 ease-in-out ${
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+      } md:hidden`}>
+        <div className="absolute inset-y-0 right-0 w-72 bg-gray-900/95 backdrop-blur-lg border-l border-gray-800 shadow-xl">
+          <div className="flex flex-col h-full p-6">
+            <div className="flex justify-end mb-8">
+              <button
+                className="text-gray-400 hover:text-white transition-colors"
+                onClick={closeMenu}
+                aria-label="Close menu"
+              >
+                <AiOutlineClose size={24} />
+              </button>
+            </div>
+
+            <div className="flex-1 flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <NavLink 
+                  key={item.href} 
+                  href={item.href} 
+                  icon={item.icon}
+                  onClick={closeMenu}
+                  mobile
+                >
+                  {item.text}
+                </NavLink>
+              ))}
+
+              <a
+                href="/resume.pdf"
+                download="Rachid_Heroumti_Resume.pdf"
+                className="flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300 mt-4"
+                onClick={closeMenu}
+              >
+                <BsFileEarmarkPerson />
+                <span>Resume</span>
+                <FiDownload size={14} />
+              </a>
+            </div>
+
+            <div className="flex justify-center space-x-4 pt-8 border-t border-gray-800">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.href}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 p-2"
+                  aria-label={social.label}
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
-          onClick={toggleMenu}
-        ></div>
+        <div 
+          className="fixed inset-0 bg-black/50 z-30 md:hidden" 
+          onClick={closeMenu}
+        />
       )}
     </>
-  );
-}
-
-function NavLink({ href, children, onClick }) {
-  return (
-    <a
-      href={href}
-      onClick={onClick}
-      className="relative text-gray-200 group hover:text-cyan-300 transition-all duration-300"
-    >
-      {children}
-      <span className="absolute left-0 bottom-[-4px] w-full h-0.5 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out rounded-full shadow-[0_0_5px_rgba(34,211,238,0.5)]" />
-    </a>
   );
 }
 

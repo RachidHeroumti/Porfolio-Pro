@@ -4,7 +4,7 @@ import { FaPhoneVolume, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const Contact = () => {
   return (
     <section 
-      className="w-full py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 text-white overflow-hidden" 
+      className="w-full py-20  text-white overflow-hidden" 
       id="contact"
     >
       <div className="max-w-7xl mx-auto px-6">

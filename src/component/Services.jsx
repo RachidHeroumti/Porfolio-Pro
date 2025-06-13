@@ -4,7 +4,7 @@ import imgprogramer from "../image/programer.jpg";
 function Services() {
   return (
     <div 
-      className="w-full py-20 bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 flex flex-col items-center"
+      className="w-full py-20 flex flex-col items-center"
       id="services"
     >
       {/* Header */}
