@@ -3,7 +3,7 @@ import React from 'react';
 function AboutMe() {
   return (
     <div 
-      className="w-full py-20  text-white font-poppins text-[15px]" 
+      className="w-full py-20 text-white font-poppins text-[15px]" 
       id="about"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -18,7 +18,7 @@ function AboutMe() {
             </span>
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            A glimpse into my journey as a Full Stack Developer—driven by curiosity and code.
+            A glimpse into my journey as a Full Stack Developer—driven by clarity, curiosity, and clean code.
           </p>
         </div>
 
@@ -31,14 +31,19 @@ function AboutMe() {
               My Story
             </h3>
             <p className="leading-relaxed text-gray-300">
-              I’m a Full Stack Developer fueled by a passion for crafting innovative solutions. With a Bachelor’s in Computer Science from 
-              <span className="font-semibold text-cyan-400"> Ibn Zohr University (2024)</span>, I’ve built a solid foundation in tech, sharpened by real-world projects.
+              <strong className="text-cyan-400">Your product doesn’t need “just a developer.”</strong> It needs someone who understands business, speed, and clean architecture.
             </p>
             <p className="leading-relaxed text-gray-300">
-              Based in <span className="font-semibold text-cyan-400">Morocco</span>, I thrive on turning ideas into reality with tools like React, Next.js, Node.js, and Spring Boot. My focus? Responsive, user-centric applications that make an impact.
+              I’m Rachid Heroumti — a developer who builds scalable, modern web & mobile applications using <span className="font-semibold text-cyan-400">Node.js, Laravel, React, and Next.js</span>. I don’t just ship code — I ship outcomes.
             </p>
             <p className="leading-relaxed text-gray-300">
-              Beyond coding, I’m a tech explorer—diving into new frameworks, contributing to open-source, and leveling up through courses and workshops. Check out my portfolio and GitHub to see what I’ve been building—I’d love to collaborate on something groundbreaking!
+              From real-time dashboards to full-featured e-commerce systems, I transform complex ideas into intuitive digital experiences. I focus on performance, clarity, and end-user value — not buzzwords.
+            </p>
+            <p className="leading-relaxed text-gray-300">
+              I work globally from <span className="font-semibold text-cyan-400">Morocco</span>, but I build like I’m on your team — fast, collaborative, and always in sync with your goals.
+            </p>
+            <p className="leading-relaxed text-gray-300">
+              If you need someone who thinks like a product owner, codes like an engineer, and communicates like a human — let’s build something worth launching.
             </p>
           </div>
 

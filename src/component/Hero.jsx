@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import imgP from '../image/img1.png';
+import React, { useState, useEffect } from "react";
+import imgP from "../image/img1.png";
 import { RiTodoLine } from "react-icons/ri";
-import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp, FaFacebook } from 'react-icons/fa';
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+  FaFacebook,
+} from "react-icons/fa";
 
 function Hero() {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const fullText = "I'm Rachid";
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     let index = 0;
     const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
+      setShowCursor((prev) => !prev);
     }, 500);
 
     const typeText = () => {
@@ -22,7 +28,7 @@ function Hero() {
         } else {
           clearInterval(timer);
           setTimeout(() => {
-            setDisplayedText('');
+            setDisplayedText("");
             index = 0;
             typeText();
           }, 3000);
@@ -52,22 +58,46 @@ function Hero() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                 {displayedText}
-                <span className={`inline-block w-1 h-8 bg-cyan-400 ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}></span>
+                <span
+                  className={`inline-block w-1 h-8 bg-cyan-400 ml-1 ${
+                    showCursor ? "opacity-100" : "opacity-0"
+                  } transition-opacity`}
+                ></span>
               </span>
             </h1>
             <p className="text-gray-300 text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
-              A passionate <span className="text-cyan-400 font-medium">Full Stack Developer</span> specializing in modern web technologies. I build efficient, scalable applications with <span className="text-cyan-400">React, Node.js, and Laravel</span>.
+              A passionate{" "}
+              <span className="text-cyan-400 font-medium">
+                Full Stack Developer
+              </span>{" "}
+              helping businesses build fast, responsive websites and mobile apps
+              using <span className="font-medium">Node.js</span>,{" "}
+              <span className="font-medium">Laravel</span>,{" "}
+              <span className="font-medium">React / Next.js</span>, and{" "}
+              <span className="font-medium">React Native</span>.
             </p>
           </div>
 
           {/* Social Links */}
           <div className="flex justify-center lg:justify-start gap-3 flex-wrap ">
             {[
-              { icon: <FaLinkedin size={20} />, href: "https://www.linkedin.com/in/rachid-heroumti-817787243/" },
-              { icon: <FaGithub size={20} />, href: "https://github.com/RachidHeroumti" },
-              { icon: <FaEnvelope size={20} />, href: "mailto:rachidheroumti0@gmail.com" },
-              { icon: <FaWhatsapp size={20} />, href: "https://wa.me/212616421373" },
-              { icon: <FaFacebook size={20} />, href: "https://facebook.com" }
+              {
+                icon: <FaLinkedin size={20} />,
+                href: "https://www.linkedin.com/in/rachid-heroumti-817787243/",
+              },
+              {
+                icon: <FaGithub size={20} />,
+                href: "https://github.com/RachidHeroumti",
+              },
+              {
+                icon: <FaEnvelope size={20} />,
+                href: "mailto:rachidheroumti0@gmail.com",
+              },
+              {
+                icon: <FaWhatsapp size={20} />,
+                href: "https://wa.me/212616421373",
+              },
+              { icon: <FaFacebook size={20} />, href: "https://facebook.com" },
             ].map((social, index) => (
               <a
                 key={index}
